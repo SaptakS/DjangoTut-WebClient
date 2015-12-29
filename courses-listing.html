@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content="study basin">
+    <meta name="author" content="bhendi saptak">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="assets/images/demo-content/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/demo-content/favicon.png">
+
+    <title>Study Basin</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="assets/bootstrap/js/html5shiv.min.js"></script>
+    <script src="assets/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    .ct-navbar--fluid {
+        min-width: auto;
+    }
+    .header-2 {
+        padding: 2%;
+    }
+    </style>
+
+    <script src="assets/js/modernizr.custom.js"></script>
+</head>
+<body class="cssAnimate ct-headroom--scrollUpMenu">
+<div class="ct-preloader"><div class="ct-preloader-content"></div></div>
+<nav class="ct-menuMobile">
+    <ul class="ct-menuMobile-navbar">
+        <li class="dropdown active"><a href="index.html">Home</a></li>
+        <li class="dropdown"><a>Courses</a>
+            <ul class="dropdown-menu">
+                <li><a href="course-single.html">Single Course V4</a></li>
+                <li><a href="courses-listing.html">List of Courses - thumbnails</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div id="ct-js-wrapper" class="ct-pageWrapper">
+<div class="ct-navbarMobile">
+    <a class="navbar-brand" href="index.html"><h3>Study Basin</h3></a>
+    <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <button type="button" class="ct-navbarCart--mobileIcon">
+        <span class="sr-only">Toggle navigation</span>
+        <span><i class="fa fa-shopping-cart"></i></span>
+    </button>
+</div>
+<div class="ct-topBar text-center">
+    <div class="container">
+        <ul class="ct-panel--user list-inline text-uppercase pull-left">
+            <li><a href="#" class="ct-js-login">login<i class="fa fa-lock"></i></a></li>
+            <li><a href="#" class="ct-js-signup">sign up<i class="fa fa-user"></i></a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<nav class="navbar navbar-default navbar-parts  yamm " data-heighttopbar="60px" data-startnavbar="0">
+    <div class="navbar-headerTop">
+        <div class="container">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-bars"></i> Browse Courses
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </div>
+            <div class="navbar-header">
+                <a href="index.html"><h3>Study Basin</h3></a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="nav navbar-nav ct-navbar--fadeInUp">
+            <li class="dropdown yamm-fw "><a href="index.html">Home</a></li>
+            <li class="dropdown active yamm-fw"><a href="courses-listing.html">Courses</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="yamm-content">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <a class="active" href="courses-listing.html">List of Courses - thumbnails</a>
+                                    <a href="course-single.html">Single Course V4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal ct-modal ct-js-modal-login fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-close"></i></span></button>
+                <h3 class="modal-title text-uppercase">Login</h3>
+            </div>
+            <div class="modal-body">
+                <form class="ct-u-paddingBottom100">
+                    <div class="form-group ct-u-marginBottom50">
+                        <input placeholder="E-mail" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Login">
+                        <input placeholder="Password" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">
+                        <div class="ct-checbox--custom">
+                            <input id="remember" type="checkbox" name="remember" value="remember">
+                            <label for="remember">remember me</label>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg text-uppercase"><span>Sign In</span></button>
+                        <div class="ct-u-marginTop50">
+                            <a href="#"><i class="fa fa-info-circle"></i> Forgot Password ?</a>
+                            <a href="#"><i class="fa fa-long-arrow-right"></i> Register Now ?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal ct-modal ct-js-modal-signup fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-close"></i></span></button>
+                <h3 class="modal-title text-uppercase">Signup</h3>
+            </div>
+            <div class="modal-body">
+                <form class="ct-u-paddingBottom100">
+                    <div class="form-group ct-u-marginBottom50">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input placeholder="Name" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Name">
+                                <input placeholder="Password" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">
+                            </div>
+                            <div class="col-md-6">
+                                <input placeholder="Email" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Email">
+                                <input placeholder="Repeat Password" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Repeat">
+                            </div>
+                        </div>
+
+
+                        <div class="ct-checbox--custom">
+                            <input id="signup" type="checkbox" name="signup" value="signup">
+                            <label for="signup">I agree with <a href="#" class="ct-u-textUnderline">The terms of use</a> </label>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg text-uppercase"><span>Sign Up</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ct-site--map ct-u-backgroundGradient">
+    <div class="container">
+        <div class="ct-u-displayTableVertical text-capitalize">
+            <div class="ct-u-displayTableCell">
+                <span class="ct-u-textBig">
+                    List of Courses
+                </span>
+            </div>
+            <div class="ct-u-displayTableCell text-right">
+                <span class="ct-u-textNormal ct-u-textItalic">
+                    <a href="courses-listing.html">Courses</a> / <a href="#">List of Courses</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="ct-u-paddingBoth100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="ct-sidebar">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-12">
+                            <section class="widget ct-widget-categories ct-u-marginBottom100">
+                                <div class="widget-inner">
+                                    <h4 class="text-uppercase ct-u-textNormal ct-fw-900">Categories</h4>
+                                    <div class="ct-divider--dark ct-u-marginBoth30"></div>
+                                    <ul class="list-unstyled ct-fw-400">
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Creative (2)</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Design 19</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Photography (25)</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Image (37)</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Wordpress (82)</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="ct-productBox ct-u-marginBottom30">
+                            <a href="course-single.html">
+                                <div class="ct-productImage">
+                                    <img src="assets/images/demo-content/productBox-8.jpg" alt="Product">
+                                </div>
+                                <div class="ct-productDescription">
+                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Social Media Management</h5>
+                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
+                                </div>
+                            </a>
+                            <div class="ct-productMeta">
+                                <div class="ct-u-displayTableVertical">
+                                    <div class="ct-u-displayTableCell">
+                                        <div class="starrr" data-rating='4'></div>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-u-colorMotive">190$</span>
+                                        <span class="ct-u-textLineThrough">290$</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <a href="#">
+                                            15 <i class="fa fa-user"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ct-productBox ct-u-marginBottom30">
+                            <a href="course-single.html">
+                                <div class="ct-productImage">
+                                    <img src="assets/images/demo-content/productBox-7.jpg" alt="Product">
+                                </div>
+                                <div class="ct-productDescription">
+                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Starting a Startup</h5>
+                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
+                                </div>
+                            </a>
+                            <div class="ct-productMeta">
+                                <div class="ct-u-displayTableVertical">
+                                    <div class="ct-u-displayTableCell">
+                                        <div class="starrr" data-rating='4'></div>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-u-colorMotive">190$</span>
+                                        <span class="ct-u-textLineThrough">290$</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <a href="#">
+                                            15 <i class="fa fa-user"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ct-productBox ct-u-marginBottom30">
+                            <a href="course-single.html">
+                                <div class="ct-productImage">
+                                    <img src="assets/images/demo-content/productBox-6.jpg" alt="Product">
+                                </div>
+                                <div class="ct-productDescription">
+                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Social Media Management</h5>
+                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
+                                </div>
+                            </a>
+                            <div class="ct-productMeta">
+                                <div class="ct-u-displayTableVertical">
+                                    <div class="ct-u-displayTableCell">
+                                        <div class="starrr" data-rating='4'></div>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-u-colorMotive">190$</span>
+                                        <span class="ct-u-textLineThrough">290$</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <a href="#">
+                                            15 <i class="fa fa-user"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ct-productBox ct-u-marginBottom30">
+                            <a href="course-single.html">
+                                <div class="ct-productImage">
+                                    <img src="assets/images/demo-content/productBox-5.jpg" alt="Product">
+                                </div>
+                                <div class="ct-productDescription">
+                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Starting a Startup</h5>
+                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
+                                </div>
+                            </a>
+                            <div class="ct-productMeta">
+                                <div class="ct-u-displayTableVertical">
+                                    <div class="ct-u-displayTableCell">
+                                        <div class="starrr" data-rating='4'></div>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-u-colorMotive">190$</span>
+                                        <span class="ct-u-textLineThrough">290$</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <a href="#">
+                                            15 <i class="fa fa-user"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ct-productBox ct-u-marginBottom30">
+                            <a href="course-single.html">
+                                <div class="ct-productImage">
+                                    <img src="assets/images/demo-content/productBox-4.jpg" alt="Product">
+                                </div>
+                                <div class="ct-productDescription">
+                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Social Media Management</h5>
+                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
+                                </div>
+                            </a>
+                            <div class="ct-productMeta">
+                                <div class="ct-u-displayTableVertical">
+                                    <div class="ct-u-displayTableCell">
+                                        <div class="starrr" data-rating='4'></div>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-u-colorMotive">190$</span>
+                                        <span class="ct-u-textLineThrough">290$</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <a href="#">
+                                            15 <i class="fa fa-user"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ct-productBox ct-u-marginBottom30">
+                            <a href="course-single.html">
+                                <div class="ct-productImage">
+                                    <img src="assets/images/demo-content/productBox-3.jpg" alt="Product">
+                                </div>
+                                <div class="ct-productDescription">
+                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Starting a Startup</h5>
+                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
+                                </div>
+                            </a>
+                            <div class="ct-productMeta">
+                                <div class="ct-u-displayTableVertical">
+                                    <div class="ct-u-displayTableCell">
+                                        <div class="starrr" data-rating='4'></div>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-u-colorMotive">190$</span>
+                                        <span class="ct-u-textLineThrough">290$</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell">
+                                        <a href="#">
+                                            15 <i class="fa fa-user"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+<div class="ct-prefooter">
+<div class="ct-u-paddingTop100 ct-u-paddingBottom80">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="widget">
+                    <div class="widget-inner">
+                        <a href="index.html"><h3 class="ct-u-marginBottom30">Study Basin</h3></a>
+                        <p class="ct-u-marginBottom40">
+                            Far far away, behind the word mount
+                            ains, far from the countries Vokalia
+                                    <span class="ct-fw-300 center-block ct-u-marginTop30">
+                                        texts. Separated they live in Bookm
+                                    arksgrove right at the coast of the
+                                    control about the blind texts it is an .
+                                    </span>
+                        </p>
+                        <a class="ct-u-textUnderline" href="#">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="widget">
+                    <div class="widget-inner">
+                        <h3 class="text-uppercase ct-fw-400 ct-u-marginBottom50">popular posts</h3>
+                        <ul class="list-unstyled">
+                            <li><a class="ct-u-lineHeight33" href="blog.html">My daily blog entry (259)</a></li>
+                            <li><a class="ct-u-lineHeight33" href="blog.html">Unrevealed Shortcodes (223)</a></li>
+                            <li><a class="ct-u-lineHeight33" href="blog.html">Developing with pleasure (204)</a></li>
+                            <li><a class="ct-u-lineHeight33" href="blog.html">Communication information (199)</a></li>
+                            <li><a class="ct-u-lineHeight33" href="blog.html">Beautiful Image Post (167)</a></li>
+                            <li><a class="ct-u-lineHeight33" href="blog.html">Unrevealed Shortcodes (223)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-sm"></div>
+            <div class="col-sm-6 col-md-3">
+                <div class="widget widget-latestPosts">
+                    <div class="widget-inner">
+                        <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">recent post</h4>
+                        <div class="media ct-u-displayTable ct-hoverImage--rectangle">
+                            <a href="blog-single.html">
+                                <div class="media-left">
+                                    <img class="media-object" src="assets/images/demo-content/recentPost-1.jpg" alt="recent post">
+                                </div>
+                                <div class="media-body">
+                                    <p class="ct-fw-300 ct-u-lineHeight25 ct-textInHover">
+                                        Far far away, behind the
+                                        word mountains, far.
+                                    </p>
+                                    <span class="center-block ct-u-colorWhiteLight">October 1,2014</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media ct-u-displayTable ct-hoverImage--rectangle">
+                            <a href="blog-single.html">
+                                <div class="media-left">
+                                    <img class="media-object" src="assets/images/demo-content/recentPost-2.jpg" alt="recent post">
+                                </div>
+                                <div class="media-body">
+                                    <p class="ct-fw-300 ct-u-lineHeight25 ct-textInHover">
+                                        Far far away, behind the
+                                        word mountains, far.
+                                    </p>
+                                    <span class="center-block ct-u-colorWhiteLight">October 1,2014</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media ct-u-displayTable ct-hoverImage--rectangle">
+                            <a href="blog-single.html">
+                                <div class="media-left">
+                                    <img class="media-object" src="assets/images/demo-content/recentPost-3.jpg" alt="recent post">
+                                </div>
+                                <div class="media-body">
+                                    <p class="ct-fw-300 ct-u-lineHeight25 ct-textInHover">
+                                        Far far away, behind the
+                                        word mountains, far.
+                                    </p>
+                                    <span class="center-block ct-u-colorWhiteLight">October 1,2014</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="widget widget-flickr ">
+                    <div class="widget-inner">
+                        <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Flickr</h4>
+                        <div class="flickr_badge">
+                            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user_set&amp;set=72157612872346179"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-sm"></div>
+        </div>
+    </div>
+</div>
+<div class="widget widget-socialsFullWidth">
+    <div class="widget-inner">
+        <div class="container">
+            <div class="ct-slick ct-js-slick text-center" data-adaptiveHeight="true" data-animations="true" data-autoplay="true" data-infinite="false" data-autoplaySpeed="6000" data-draggable="true" data-touchMove="false" data-arrows="false" data-XSitems="1" data-SMitems="2" data-MDitems="4" data-LGitems="4" data-items="1">
+                <div class="item">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="ct-u-paddingBoth100">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Other links</h4>
+                <div class="widget widget-links">
+                    <div class="widget-inner">
+                        <ul class="ct-list-hyperlink list-unstyled">
+                            <li><a href="courses-listing.html">Courses</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Showcase</a></li>
+                            <li><a href="#">Thoughts</a></li>
+                            <li><a href="#">Uncategorized</a></li>
+                            <li><a href="#">Full Width Template</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Education</h4>
+                <div class="widget widget-links">
+                    <div class="widget-inner">
+                        <ul class="ct-list-default list-unstyled">
+                            <li><a href="features-pricetables.html">Membership Levels</a></li>
+                            <li><a href="#">Reasons to join</a></li>
+                            <li><a href="courses-listing.html">Shop</a></li>
+                            <li><a href="#">Cart</a></li>
+                            <li><a href="members.html">Members</a></li>
+                            <li><a href="features-grid.html">Shortcodes</a></li>
+                            <li><a href="#">Full Width Template</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-sm"></div>
+            <div class="col-sm-6 col-md-3">
+                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Engineering</h4>
+                <div class="widget widget-links">
+                    <div class="widget-inner">
+                        <ul class="ct-list-default list-unstyled">
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="courses-listing.html">New Products</a></li>
+                            <li><a href="#">Best Sellers</a></li>
+                            <li><a href="university-search.html">Our Stores</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="courses-listing.html">Shop</a></li>
+                            <li><a href="#">Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Law & Business</h4>
+                <div class="widget widget-links">
+                    <div class="widget-inner">
+                        <ul class="ct-list-default list-unstyled">
+                            <li><a href="#">My Orders</a></li>
+                            <li><a href="#">My Credit Slips</a></li>
+                            <li><a href="#">My Addresses</a></li>
+                            <li><a href="member-single.html">My Personal Info</a></li>
+                            <li><a href="#">My Specials</a></li>
+                            <li><a href="courses-listing.html">My New Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-sm"></div>
+        </div>
+    </div>
+</div>-->
+</div>
+<div class="ct-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-unstyled list-inline ct-copyright">
+                    <li>Copyright 2015</li>
+                    <li>Created by</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+</div>
+
+<!-- JavaScripts -->
+
+<script src="assets/js/main-compiled.js"></script>
+
+
+<!-- switcher
+<script src="demo/js/demo.js"></script>
+<script type="text/javascript">
+    $('head').append('<link rel="stylesheet" type="text/css" href="demo/css/demo.css">');
+    $('head').append('<link rel="stylesheet" type="text/css" href="demo/generator.css">');
+</script> -->
+
+</body>
+</html>
