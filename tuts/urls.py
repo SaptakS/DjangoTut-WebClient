@@ -17,14 +17,22 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import patterns, include, url
-from login.views import *
+
+import login.views as login_views
+import courses.views as courses_views
+from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', 'django.contrib.auth.views.login'),
-    url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
-    url(r'^register/$', register),
-    url(r'^register/success/$', register_success),
-    url(r'^home/$', home),
-    url(r'^logout/$', logout_page),
+    url(r'^$', views.home),
+    url(r'^index.html/$', views.home),
+    url(r'^contact.html/$', views.contacts),
+    url(r'^course-single.html/$', courses_views.course_single),
+    url(r'^courses-listing.html/$', courses_views.courses_listing),
+    #url(r'^$', 'django.contrib.auth.views.login'),
+    #url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
+    #url(r'^register/$', login_views.register),
+    #url(r'^register/success/$', login_views.register_success),
+    #url(r'^home/$', login_views.home),
+    #url(r'^logout/$', login_views.logout_page),
 ]
