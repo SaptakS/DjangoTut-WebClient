@@ -25,10 +25,10 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
-    url(r'^index.html/$', views.home),
-    url(r'^contact.html/$', views.contacts),
-    url(r'^course-single.html/$', courses_views.course_single),
-    url(r'^courses-listing.html/$', courses_views.courses_listing),
+    url(r'^home/$', views.home),
+    url(r'^contact/$', views.contacts),
+    url(r'^course-single/$', courses_views.course_single),
+    url(r'^courses-listing/$', courses_views.courses_listing),
     #url(r'^$', 'django.contrib.auth.views.login'),
     #url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
     #url(r'^register/$', login_views.register),
