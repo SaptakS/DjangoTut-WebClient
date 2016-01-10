@@ -30,6 +30,10 @@
     .ct-navbar--fluid {
         min-width: auto;
     }
+
+    .navbar-header {
+        margin: 2%;
+    }
     </style>
 
     <script src="/static/js/modernizr.custom.js"></script>
@@ -37,14 +41,22 @@
 <body class="cssAnimate ct-headroom--scrollUpMenu"><div class="ct-preloader"><div class="ct-preloader-content"></div></div>
 <nav class="ct-menuMobile">
     <ul class="ct-menuMobile-navbar">
-        <li class="dropdown active"><a href="home">Home</a></li>
+        <li class="dropdown active"><a href="/home">Home</a></li>
         <li class="dropdown"><a>Courses</a>
             <ul class="dropdown-menu">
-                <li><a href="/course-single">Course</a></li>
-                <li><a href="/courses-listing">List of Courses - thumbnails</a></li>
+                <li><a href="/course-single">IPM</a></li>
+                <li><a href="/courses-single">Hotel Management</a></li>
+                <li><a href="/courses-single">BBA</a></li>
+                <li><a href="/courses-single">Law</a></li>
             </ul>
         </li>
         <li class="dropdown"><a href="/contact">Contact Us</a></li>
+        <li class="dropdown"><a href="#why">Why join?</a></li>
+        <li class="dropdown"><a href="#">GK dose</a></li>
+        <li class="dropdown"><a href="#">Mock Series</a></li>
+        <li class="dropdown"><a href="#">News</a></li>
+        <li class="dropdown"><a href="/blog">Blog</a></li>
+        <li class="dropdown"><a href="#">About</a></li>                
     </ul>
 </nav>
 <div id="ct-js-wrapper" class="ct-pageWrapper">
@@ -77,17 +89,29 @@
         </div>
         <div class="ct-navbar--fluid pull-right">
             <ul class="nav navbar-nav ct-navbar--fadeInUp">
-                <li class="dropdown yamm-fw active"><a href="home">Home</a></li>
+                <li class="dropdown yamm-fw active"><a href="/home">Home</a></li>
+                <li class="dropdown yamm-fw"><a href="#why">Why join?</a></li>
+                <li class="dropdown yamm-fw"><a href="#">GK dose</a></li>
+                <li class="dropdown yamm-fw"><a href="#">Mock Series</a></li>
+                <li class="dropdown yamm-fw"><a href="#">News</a></li>
+                <li class="dropdown yamm-fw"><a href="#">Blog</a></li>
+                <li class="dropdown yamm-fw"><a href="#">About</a></li>                
                 <li class="dropdown yamm-fw"><a href="/courses-listing">Courses</a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="yamm-content">
                                 <div class="row">
-                                    <div class="col-sm-4">
-                                        <a href="/courses-listing">List of Courses - inline</a>
-                                        <a href="/course-single">Single Course V1</a>
-                                        <a href="/course-single">Single Course V2</a>
-                                        <a href="/course-single">Single Course V3</a>
+                                    <div class="col-sm-3">
+                                        <a href="/courses-listing">IPM</a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a href="/courses-single">Hotel Management</a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a href="/courses-single">Law</a>
+                                    </div>
+                                    <div class="col-sm-3">    
+                                        <a href="/courses-single">BBA</a>
                                     </div>
                                 </div>
                             </div>
@@ -849,11 +873,11 @@
         </div>
     </div>
 </section>
-<section class="ct-u-paddingBoth100 ct-u-backgroundLightGreen">
+<section class="ct-u-paddingBoth100 ct-u-backgroundLightGreen" id="whyjoinus">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3 class="ct-fw-900 ct-u-marginBottom30">Why Choose Us</h3>
+                <h3 class="ct-fw-900 ct-u-marginBottom30" id="why">Why Join Us</h3>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
@@ -1003,105 +1027,6 @@
 </section>
 <footer>
 <div class="ct-prefooter">
-<div class="ct-u-paddingTop100 ct-u-paddingBottom80">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-md-3">
-                <div class="widget">
-                    <div class="widget-inner">
-                        <a href="home"><h3 class="ct-u-marginBottom30">Study Basin</h3></a>
-                        <p class="ct-u-marginBottom40">
-                            Far far away, behind the word mount
-                            ains, far from the countries Vokalia
-                                    <span class="ct-fw-300 center-block ct-u-marginTop30">
-                                        texts. Separated they live in Bookm
-                                    arksgrove right at the coast of the
-                                    control about the blind texts it is an .
-                                    </span>
-                        </p>
-                        <a class="ct-u-textUnderline" href="#">LEARN MORE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="widget">
-                    <div class="widget-inner">
-                        <h3 class="text-uppercase ct-fw-400 ct-u-marginBottom50">popular posts</h3>
-                        <ul class="list-unstyled">
-                            <li><a class="ct-u-lineHeight33" href="blog.html">My daily blog entry (259)</a></li>
-                            <li><a class="ct-u-lineHeight33" href="blog.html">Unrevealed Shortcodes (223)</a></li>
-                            <li><a class="ct-u-lineHeight33" href="blog.html">Developing with pleasure (204)</a></li>
-                            <li><a class="ct-u-lineHeight33" href="blog.html">Communication information (199)</a></li>
-                            <li><a class="ct-u-lineHeight33" href="blog.html">Beautiful Image Post (167)</a></li>
-                            <li><a class="ct-u-lineHeight33" href="blog.html">Unrevealed Shortcodes (223)</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix visible-sm"></div>
-            <div class="col-sm-6 col-md-3">
-                <div class="widget widget-latestPosts">
-                    <div class="widget-inner">
-                        <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">recent post</h4>
-                        <div class="media ct-u-displayTable ct-hoverImage--rectangle">
-                            <a href="blog-single.html">
-                                <div class="media-left">
-                                    <img class="media-object" src="/static/images/demo-content/recentPost-1.jpg" alt="recent post">
-                                </div>
-                                <div class="media-body">
-                                    <p class="ct-fw-300 ct-u-lineHeight25 ct-textInHover">
-                                        Far far away, behind the
-                                        word mountains, far.
-                                    </p>
-                                    <span class="center-block ct-u-colorWhiteLight">October 1,2014</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="media ct-u-displayTable ct-hoverImage--rectangle">
-                            <a href="blog-single.html">
-                                <div class="media-left">
-                                    <img class="media-object" src="/static/images/demo-content/recentPost-2.jpg" alt="recent post">
-                                </div>
-                                <div class="media-body">
-                                    <p class="ct-fw-300 ct-u-lineHeight25 ct-textInHover">
-                                        Far far away, behind the
-                                        word mountains, far.
-                                    </p>
-                                    <span class="center-block ct-u-colorWhiteLight">October 1,2014</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="media ct-u-displayTable ct-hoverImage--rectangle">
-                            <a href="blog-single.html">
-                                <div class="media-left">
-                                    <img class="media-object" src="/static/images/demo-content/recentPost-3.jpg" alt="recent post">
-                                </div>
-                                <div class="media-body">
-                                    <p class="ct-fw-300 ct-u-lineHeight25 ct-textInHover">
-                                        Far far away, behind the
-                                        word mountains, far.
-                                    </p>
-                                    <span class="center-block ct-u-colorWhiteLight">October 1,2014</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="widget widget-flickr ">
-                    <div class="widget-inner">
-                        <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Flickr</h4>
-                        <div class="flickr_badge">
-                            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user_set&amp;set=72157612872346179"></script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix visible-sm"></div>
-        </div>
-    </div>
-</div>
 <div class="widget widget-socialsFullWidth">
     <div class="widget-inner">
         <div class="container">
@@ -1122,77 +1047,6 @@
         </div>
     </div>
 </div>
-<!--<div class="ct-u-paddingBoth100">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-md-3">
-                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Other links</h4>
-                <div class="widget widget-links">
-                    <div class="widget-inner">
-                        <ul class="ct-list-hyperlink list-unstyled">
-                            <li><a href="/courses-listing">Courses</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Showcase</a></li>
-                            <li><a href="#">Thoughts</a></li>
-                            <li><a href="#">Uncategorized</a></li>
-                            <li><a href="#">Full Width Template</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Education</h4>
-                <div class="widget widget-links">
-                    <div class="widget-inner">
-                        <ul class="ct-list-default list-unstyled">
-                            <li><a href="features-pricetables.html">Membership Levels</a></li>
-                            <li><a href="#">Reasons to join</a></li>
-                            <li><a href="/courses-listing">Shop</a></li>
-                            <li><a href="#">Cart</a></li>
-                            <li><a href="members.html">Members</a></li>
-                            <li><a href="features-grid.html">Shortcodes</a></li>
-                            <li><a href="#">Full Width Template</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix visible-sm"></div>
-            <div class="col-sm-6 col-md-3">
-                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Engineering</h4>
-                <div class="widget widget-links">
-                    <div class="widget-inner">
-                        <ul class="ct-list-default list-unstyled">
-                            <li><a href="#">Specials</a></li>
-                            <li><a href="/courses-listing">New Products</a></li>
-                            <li><a href="#">Best Sellers</a></li>
-                            <li><a href="university-search.html">Our Stores</a></li>
-                            <li><a href="/contact">Contact us</a></li>
-                            <li><a href="/courses-listing">Shop</a></li>
-                            <li><a href="#">Cart</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <h4 class="text-uppercase ct-fw-400 ct-u-marginBottom50">Law & Business</h4>
-                <div class="widget widget-links">
-                    <div class="widget-inner">
-                        <ul class="ct-list-default list-unstyled">
-                            <li><a href="#">My Orders</a></li>
-                            <li><a href="#">My Credit Slips</a></li>
-                            <li><a href="#">My Addresses</a></li>
-                            <li><a href="member-single.html">My Personal Info</a></li>
-                            <li><a href="#">My Specials</a></li>
-                            <li><a href="/courses-listing">My New Products</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix visible-sm"></div>
-        </div>
-    </div>
-</div>-->
 </div>
 <div class="ct-footer">
     <div class="container">
