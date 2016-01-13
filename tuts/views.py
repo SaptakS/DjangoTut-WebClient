@@ -7,3 +7,7 @@ def home(request):
 def contacts(request):
     ''' Renders the contacts page '''
     return render(request, 'contact.html')
+
+def uc(request):
+	'''Render the under construction page'''
+	return render(request, '404.html')

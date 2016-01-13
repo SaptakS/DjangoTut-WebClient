@@ -7,3 +7,11 @@ def course_single(request):
 def courses_listing(request):
     ''' View Function for course-listings.html '''
     return render(request, 'courses-listing.html')
+
+def gkdose(request):
+    ''' View Function for course-listings.html '''
+    return render(request, 'gkdose.html')
+
+def mock(request):
+    ''' View Function for course-listings.html '''
+    return render(request, 'mock.html')

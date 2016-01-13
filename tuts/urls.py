@@ -27,8 +27,11 @@ urlpatterns = [
     url(r'^$', views.home),
     url(r'^home/$', views.home),
     url(r'^contact/$', views.contacts),
+    url(r'^uc/$', views.uc),
     url(r'^course-single/$', courses_views.course_single),
     url(r'^courses-listing/$', courses_views.courses_listing),
+    url(r'^gkdose/$', courses_views.gkdose),
+    url(r'^mock/$', courses_views.mock),
     #url(r'^$', 'django.contrib.auth.views.login'),
     #url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
     #url(r'^register/$', login_views.register),
