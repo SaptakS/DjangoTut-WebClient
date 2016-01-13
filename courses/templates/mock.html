@@ -6,18 +6,17 @@
 <html class="no-js ie9" lang="en"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
-
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="description" content="study basin">
-    <meta name="author" content="bhendi saptak">
+    <meta name="description" content="Study Basin">
+    <meta name="author" content="lateLatif">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="/static/images/demo-content/favicon.png">
     <link rel="apple-touch-icon" href="/static/images/demo-content/favicon.png">
 
-    <title>Study Basin</title>
+    <title>StudyBasin</title>
 
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
@@ -28,22 +27,20 @@
     <script src="/static/bootstrap/js/respond.min.js"></script>
     <![endif]-->
     <style>
-    .ct-navbar--fluid {
-        min-width: auto;
-    }
-    .header-2 {
-        padding: 2%;
-    }
+        .ct-navbar--fluid {
+            min-width: auto;
+        }
+        .header-2 {
+            padding: 2%;
+        }
     </style>
-
     <script src="/static/js/modernizr.custom.js"></script>
 </head>
-<body class="cssAnimate ct-headroom--scrollUpMenu">
-<div class="ct-preloader"><div class="ct-preloader-content"></div></div>
+<body class="cssAnimate ct-headroom--scrollUpMenu"><div class="ct-preloader"><div class="ct-preloader-content"></div></div>
 <nav class="ct-menuMobile">
     <ul class="ct-menuMobile-navbar">
         <li class="dropdown"><a href="/home">Home</a></li>
-        <li class="dropdown active"><a href="#">Courses</a>
+        <li class="dropdown"><a href="/courses-listing">Courses</a>
             <ul class="dropdown-menu">
                 <li><a href="/course-single">IPM</a></li>
                 <li><a href="/course-single">Hotel Management</a></li>
@@ -54,7 +51,7 @@
         <li class="dropdown"><a href="/contact">Contact Us</a></li>
         <li class="dropdown"><a href="/home/#why">Why join?</a></li>
         <li class="dropdown"><a href="/gkdose">GK dose</a></li>
-        <li class="dropdown"><a href="/mock">Mock Series</a></li>
+        <li class="dropdown active"><a href="#">Mock Series</a></li>
         <li class="dropdown"><a href="/404">News</a></li>
         <li class="dropdown"><a href="/blog">Blog</a></li>
         <li class="dropdown"><a href="/home/#abtus">About</a></li>                
@@ -63,7 +60,7 @@
 
 <div id="ct-js-wrapper" class="ct-pageWrapper">
 <div class="ct-navbarMobile">
-    <a class="navbar-brand" href="/home"><h3>Study Basin</h3></a>
+    <a class="navbar-brand" href="index.html"><img src="/static/images/demo-content/logo.png" alt="Website Logo"> </a>
     <button type="button" class="navbar-toggle">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -81,6 +78,23 @@
             <li><a href="#" class="ct-js-login">login<i class="fa fa-lock"></i></a></li>
             <li><a href="#" class="ct-js-signup">sign up<i class="fa fa-user"></i></a></li>
         </ul>
+        <div class="ct-widget--group pull-right">
+            <ul class="ct-widget--socials list-inline text-uppercase">
+                <li><a href="https://www.facebook.com/createITpl"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/createitpl"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="http://www.createit.pl/"><i class="fa fa-wordpress"></i></a></li>
+            </ul>
+            <div class="btn-group">
+                <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="/static/images/flags/png/england.png" alt="UK">English <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#"><img src="/static/images/flags/png/england.png" alt="UK">English</a></li>
+                    <li><a href="#"><img src="/static/images/flags/png/de.png" alt="GER">German</a></li>
+                    <li><a href="#"><img src="/static/images/flags/png/pl.png" alt="PL">Polish</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="clearfix"></div>
     </div>
 </div>
@@ -110,11 +124,11 @@
                 <li class="dropdown yamm-fw"><a href="/home">Home</a></li>
                 <li class="dropdown yamm-fw"><a href="/home/#why">Why join?</a></li>
                 <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
-                <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
+                <li class="dropdown yamm-fw active"><a href="#">Mock Series</a></li>
                 <li class="dropdown yamm-fw"><a href="/404">News</a></li>
                 <li class="dropdown yamm-fw"><a href="/404">Blog</a></li>
                 <li class="dropdown yamm-fw"><a href="/home/#abtus">About</a></li>                
-                <li class="dropdown yamm-fw active"><a href="#">Courses</a>
+                <li class="dropdown yamm-fw"><a href="/courses-listing">Courses</a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="yamm-content">
@@ -143,6 +157,7 @@
 </nav>
 
 <!-- Modal -->
+
 <div class="modal ct-modal ct-js-modal-login fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -214,12 +229,7 @@
         <div class="ct-u-displayTableVertical text-capitalize">
             <div class="ct-u-displayTableCell">
                 <span class="ct-u-textBig">
-                    List of Courses
-                </span>
-            </div>
-            <div class="ct-u-displayTableCell text-right">
-                <span class="ct-u-textNormal ct-u-textItalic">
-                    <a href="/courses-listing">Courses</a> / <a href="#">List of Courses</a>
+                    Mock Series
                 </span>
             </div>
         </div>
@@ -239,7 +249,7 @@
                                     <ul class="list-unstyled ct-fw-400">
                                         <li><a href="#"><i class="fa fa-angle-right"></i>IPM (2)</a></li>
                                         <li><a href="#"><i class="fa fa-angle-right"></i>Hotel Management 19</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i>Law (25)</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>law (25)</a></li>
                                         <li><a href="#"><i class="fa fa-angle-right"></i>BBA (37)</a></li>
                                     </ul>
                                 </div>
@@ -249,177 +259,217 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="ct-productBox ct-u-marginBottom30">
-                            <a href="/course-single">
-                                <div class="ct-productImage">
-                                    <img src="/static/images/demo-content/productBox-8.jpg" alt="Product">
-                                </div>
-                                <div class="ct-productDescription">
-                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Social Media Management</h5>
-                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
-                                </div>
+                <div class="ct-productBox ct-productBox--inline ct-u-displayTable ct-u-marginBottom30">
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productImage">
+                            <a href="course-single.html">
+                                <img src="/static/images/demo-content/product-inline1.jpg" alt="Product">
                             </a>
-                            <div class="ct-productMeta">
-                                <div class="ct-u-displayTableVertical">
-                                    <div class="ct-u-displayTableCell">
-                                        <div class="starrr" data-rating='4'></div>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <span class="ct-u-colorMotive">190$</span>
-                                        <span class="ct-u-textLineThrough">290$</span>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <a href="#">
-                                            15 <i class="fa fa-user"></i>
-                                        </a>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productDescription">
+                            <a href="course-single.html"><h5 class="ct-fw-600 ct-u-marginBottom10">Developing Mobile Apps</h5></a>
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing But I mu
+                                        explain to you how all this mistaken idea of denouncing pleas
+                                        ure and praising pain was born and I will give you a complete
+                                        elit. Aenean .
+                                        </span>
+                        </div>
+                        <div class="ct-productMeta">
+                            <div class="ct-u-displayTableVertical">
+                                <div class="ct-u-displayTableCell">
+                                    <div class="starrr" data-rating='4'></div>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <span class="ct-u-colorMotive">190$</span>
+                                    <span class="ct-u-textLineThrough">290$</span>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <a href="#">
+                                        15 <i class="fa fa-user"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="ct-productBox ct-u-marginBottom30">
-                            <a href="/course-single">
-                                <div class="ct-productImage">
-                                    <img src="/static/images/demo-content/productBox-7.jpg" alt="Product">
-                                </div>
-                                <div class="ct-productDescription">
-                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Starting a Startup</h5>
-                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
-                                </div>
+                </div>
+                <div class="ct-productBox ct-productBox--inline ct-u-displayTable ct-u-marginBottom30">
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productImage">
+                            <a href="course-single.html">
+                                <img src="/static/images/demo-content/product-inline2.jpg" alt="Product">
                             </a>
-                            <div class="ct-productMeta">
-                                <div class="ct-u-displayTableVertical">
-                                    <div class="ct-u-displayTableCell">
-                                        <div class="starrr" data-rating='4'></div>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <span class="ct-u-colorMotive">190$</span>
-                                        <span class="ct-u-textLineThrough">290$</span>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <a href="#">
-                                            15 <i class="fa fa-user"></i>
-                                        </a>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productDescription">
+                            <a href="course-single.html"><h5 class="ct-fw-600 ct-u-marginBottom10">Developing Mobile Apps</h5></a>
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing But I mu
+                                        explain to you how all this mistaken idea of denouncing pleas
+                                        ure and praising pain was born and I will give you a complete
+                                        elit. Aenean .
+                                        </span>
+                        </div>
+                        <div class="ct-productMeta">
+                            <div class="ct-u-displayTableVertical">
+                                <div class="ct-u-displayTableCell">
+                                    <div class="starrr" data-rating='4'></div>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <span class="ct-u-colorMotive">190$</span>
+                                    <span class="ct-u-textLineThrough">290$</span>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <a href="#">
+                                        15 <i class="fa fa-user"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="ct-productBox ct-u-marginBottom30">
-                            <a href="/course-single">
-                                <div class="ct-productImage">
-                                    <img src="/static/images/demo-content/productBox-6.jpg" alt="Product">
-                                </div>
-                                <div class="ct-productDescription">
-                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Social Media Management</h5>
-                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
-                                </div>
+                </div>
+                <div class="ct-productBox ct-productBox--inline ct-u-displayTable ct-u-marginBottom30">
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productImage">
+                            <a href="course-single.html">
+                                <img src="/static/images/demo-content/product-inline1.jpg" alt="Product">
                             </a>
-                            <div class="ct-productMeta">
-                                <div class="ct-u-displayTableVertical">
-                                    <div class="ct-u-displayTableCell">
-                                        <div class="starrr" data-rating='4'></div>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <span class="ct-u-colorMotive">190$</span>
-                                        <span class="ct-u-textLineThrough">290$</span>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <a href="#">
-                                            15 <i class="fa fa-user"></i>
-                                        </a>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productDescription">
+                            <a href="course-single.html"><h5 class="ct-fw-600 ct-u-marginBottom10">Developing Mobile Apps</h5></a>
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing But I mu
+                                        explain to you how all this mistaken idea of denouncing pleas
+                                        ure and praising pain was born and I will give you a complete
+                                        elit. Aenean .
+                                        </span>
+                        </div>
+                        <div class="ct-productMeta">
+                            <div class="ct-u-displayTableVertical">
+                                <div class="ct-u-displayTableCell">
+                                    <div class="starrr" data-rating='4'></div>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <span class="ct-u-colorMotive">190$</span>
+                                    <span class="ct-u-textLineThrough">290$</span>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <a href="#">
+                                        15 <i class="fa fa-user"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="ct-productBox ct-u-marginBottom30">
-                            <a href="/course-single">
-                                <div class="ct-productImage">
-                                    <img src="/static/images/demo-content/productBox-5.jpg" alt="Product">
-                                </div>
-                                <div class="ct-productDescription">
-                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Starting a Startup</h5>
-                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
-                                </div>
+                </div>
+                <div class="ct-productBox ct-productBox--inline ct-u-displayTable ct-u-marginBottom30">
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productImage">
+                            <a href="course-single.html">
+                                <img src="/static/images/demo-content/product-inline2.jpg" alt="Product">
                             </a>
-                            <div class="ct-productMeta">
-                                <div class="ct-u-displayTableVertical">
-                                    <div class="ct-u-displayTableCell">
-                                        <div class="starrr" data-rating='4'></div>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <span class="ct-u-colorMotive">190$</span>
-                                        <span class="ct-u-textLineThrough">290$</span>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <a href="#">
-                                            15 <i class="fa fa-user"></i>
-                                        </a>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productDescription">
+                            <a href="course-single.html"><h5 class="ct-fw-600 ct-u-marginBottom10">Developing Mobile Apps</h5></a>
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing But I mu
+                                        explain to you how all this mistaken idea of denouncing pleas
+                                        ure and praising pain was born and I will give you a complete
+                                        elit. Aenean .
+                                        </span>
+                        </div>
+                        <div class="ct-productMeta">
+                            <div class="ct-u-displayTableVertical">
+                                <div class="ct-u-displayTableCell">
+                                    <div class="starrr" data-rating='4'></div>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <span class="ct-u-colorMotive">190$</span>
+                                    <span class="ct-u-textLineThrough">290$</span>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <a href="#">
+                                        15 <i class="fa fa-user"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="ct-productBox ct-u-marginBottom30">
-                            <a href="/course-single">
-                                <div class="ct-productImage">
-                                    <img src="/static/images/demo-content/productBox-4.jpg" alt="Product">
-                                </div>
-                                <div class="ct-productDescription">
-                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Social Media Management</h5>
-                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
-                                </div>
+                </div>
+                <div class="ct-productBox ct-productBox--inline ct-u-displayTable ct-u-marginBottom30">
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productImage">
+                            <a href="course-single.html">
+                                <img src="/static/images/demo-content/product-inline1.jpg" alt="Product">
                             </a>
-                            <div class="ct-productMeta">
-                                <div class="ct-u-displayTableVertical">
-                                    <div class="ct-u-displayTableCell">
-                                        <div class="starrr" data-rating='4'></div>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <span class="ct-u-colorMotive">190$</span>
-                                        <span class="ct-u-textLineThrough">290$</span>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <a href="#">
-                                            15 <i class="fa fa-user"></i>
-                                        </a>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productDescription">
+                            <a href="course-single.html"><h5 class="ct-fw-600 ct-u-marginBottom10">Developing Mobile Apps</h5></a>
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing But I mu
+                                        explain to you how all this mistaken idea of denouncing pleas
+                                        ure and praising pain was born and I will give you a complete
+                                        elit. Aenean .
+                                        </span>
+                        </div>
+                        <div class="ct-productMeta">
+                            <div class="ct-u-displayTableVertical">
+                                <div class="ct-u-displayTableCell">
+                                    <div class="starrr" data-rating='4'></div>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <span class="ct-u-colorMotive">190$</span>
+                                    <span class="ct-u-textLineThrough">290$</span>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <a href="#">
+                                        15 <i class="fa fa-user"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="ct-productBox ct-u-marginBottom30">
-                            <a href="/course-single">
-                                <div class="ct-productImage">
-                                    <img src="/static/images/demo-content/productBox-3.jpg" alt="Product">
-                                </div>
-                                <div class="ct-productDescription">
-                                    <h5 class="ct-fw-600 ct-u-marginBottom10">Starting a Startup</h5>
-                                    <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean .</span>
-                                </div>
+                </div>
+                <div class="ct-productBox ct-productBox--inline ct-u-displayTable ct-u-marginBottom30">
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productImage">
+                            <a href="course-single.html">
+                                <img src="/static/images/demo-content/product-inline2.jpg" alt="Product">
                             </a>
-                            <div class="ct-productMeta">
-                                <div class="ct-u-displayTableVertical">
-                                    <div class="ct-u-displayTableCell">
-                                        <div class="starrr" data-rating='4'></div>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <span class="ct-u-colorMotive">190$</span>
-                                        <span class="ct-u-textLineThrough">290$</span>
-                                    </div>
-                                    <div class="ct-u-displayTableCell">
-                                        <a href="#">
-                                            15 <i class="fa fa-user"></i>
-                                        </a>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="ct-u-displayTableCell">
+                        <div class="ct-productDescription">
+                            <a href="course-single.html"><h5 class="ct-fw-600 ct-u-marginBottom10">Developing Mobile Apps</h5></a>
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing But I mu
+                                        explain to you how all this mistaken idea of denouncing pleas
+                                        ure and praising pain was born and I will give you a complete
+                                        elit. Aenean .
+                                        </span>
+                        </div>
+                        <div class="ct-productMeta">
+                            <div class="ct-u-displayTableVertical">
+                                <div class="ct-u-displayTableCell">
+                                    <div class="starrr" data-rating='4'></div>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <span class="ct-u-colorMotive">190$</span>
+                                    <span class="ct-u-textLineThrough">290$</span>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <a href="#">
+                                        15 <i class="fa fa-user"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -472,12 +522,12 @@
 <script src="/static/js/main-compiled.js"></script>
 
 
-<!-- switcher
+<!-- switcher --
 <script src="demo/js/demo.js"></script>
 <script type="text/javascript">
     $('head').append('<link rel="stylesheet" type="text/css" href="demo/css/demo.css">');
     $('head').append('<link rel="stylesheet" type="text/css" href="demo/generator.css">');
-</script> -->
-
+</script>
+<!-- end switcher -->
 </body>
 </html>
