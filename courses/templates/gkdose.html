@@ -30,7 +30,7 @@
         .ct-navbar--fluid {
             min-width: auto;
         }
-        .header-2 {
+        .navbar-header {
             padding: 2%;
         }
     </style>
@@ -41,7 +41,7 @@
 <nav class="ct-menuMobile">
     <ul class="ct-menuMobile-navbar">
         <li class="dropdown"><a href="/home">Home</a></li>
-        <li class="dropdown"><a href="/courses-listing">Courses</a>
+        <li class="dropdown"><a href="#">Courses</a>
             <ul class="dropdown-menu">
                 <li><a href="/course-single">IPM</a></li>
                 <li><a href="/course-single">Hotel Management</a></li>
@@ -67,10 +67,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <button type="button" class="ct-navbarCart--mobileIcon">
-        <span class="sr-only">Toggle navigation</span>
-        <span><i class="fa fa-shopping-cart"></i></span>
-    </button>
 </div>
 <div class="ct-topBar text-center">
     <div class="container">
@@ -78,28 +74,11 @@
             <li><a href="#" class="ct-js-login">login<i class="fa fa-lock"></i></a></li>
             <li><a href="#" class="ct-js-signup">sign up<i class="fa fa-user"></i></a></li>
         </ul>
-        <div class="ct-widget--group pull-right">
-            <ul class="ct-widget--socials list-inline text-uppercase">
-                <li><a href="https://www.facebook.com/createITpl"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/createitpl"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="http://www.createit.pl/"><i class="fa fa-wordpress"></i></a></li>
-            </ul>
-            <div class="btn-group">
-                <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="/static/images/flags/png/england.png" alt="UK">English <i class="fa fa-angle-down"></i>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><img src="/static/images/flags/png/england.png" alt="UK">English</a></li>
-                    <li><a href="#"><img src="/static/images/flags/png/de.png" alt="GER">German</a></li>
-                    <li><a href="#"><img src="/static/images/flags/png/pl.png" alt="PL">Polish</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="clearfix"></div>
     </div>
 </div>
 <nav class="navbar navbar-default navbar-parts  yamm " data-heighttopbar="60px" data-startnavbar="0">
-    <div class="navbar-headerTop">
+   <!--  <div class="navbar-headerTop">
         <div class="container">
             <div class="btn-group pull-right">
                 <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -117,8 +96,11 @@
             </div>
             <div class="clearfix"></div>
         </div>
-    </div>
+    </div> -->
     <div class="container">
+        <div class="navbar-header">
+            <a href="/home"><h3>Study Basin</h3></a>
+        </div>
         <div class="ct-navbar--fluid pull-right">
             <ul class="nav navbar-nav ct-navbar--fadeInUp">
                 <li class="dropdown yamm-fw"><a href="/home">Home</a></li>
@@ -198,14 +180,20 @@
             <div class="modal-body">
                 <form class="ct-u-paddingBottom100">
                     <div class="form-group ct-u-marginBottom50">
-                        <div class="row">
+                       <div class="row">
                             <div class="col-md-6">
-                                <input placeholder="Name" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Name">
-                                <input placeholder="Password" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">
+                                <input placeholder="Name" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Name">   
                             </div>
                             <div class="col-md-6">
                                 <input placeholder="Email" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Email">
-                                <input placeholder="Repeat Password" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Repeat">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input placeholder="Password" type="password" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">
+                            </div>
+                            <div class="col-md-6">
+                                <input placeholder="Repeat Password" type="password" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Repeat">
                             </div>
                         </div>
 

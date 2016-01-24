@@ -31,7 +31,7 @@
     .ct-navbar--fluid {
         min-width: auto;
     }
-    .header-2 {
+    .navbar-header {
         padding: 2%;
     }
     </style>
@@ -70,10 +70,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <button type="button" class="ct-navbarCart--mobileIcon">
-        <span class="sr-only">Toggle navigation</span>
-        <span><i class="fa fa-shopping-cart"></i></span>
-    </button>
 </div>
 <div class="ct-topBar text-center">
     <div class="container">
@@ -85,7 +81,7 @@
     </div>
 </div>
 <nav class="navbar navbar-default navbar-parts  yamm " data-heighttopbar="60px" data-startnavbar="0">
-    <div class="navbar-headerTop">
+    <!-- <div class="navbar-headerTop">
         <div class="container">
             <div class="btn-group pull-right">
                 <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -103,8 +99,11 @@
             </div>
             <div class="clearfix"></div>
         </div>
-    </div>
+    </div> -->
     <div class="container">
+        <div class="navbar-header">
+            <a href="/home"><h3>Study Basin</h3></a>
+        </div>
         <div class="ct-navbar--fluid pull-right">
             <ul class="nav navbar-nav ct-navbar--fadeInUp">
                 <li class="dropdown yamm-fw"><a href="/home">Home</a></li>
@@ -183,14 +182,20 @@
             <div class="modal-body">
                 <form class="ct-u-paddingBottom100">
                     <div class="form-group ct-u-marginBottom50">
-                        <div class="row">
+                       <div class="row">
                             <div class="col-md-6">
-                                <input placeholder="Name" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Name">
-                                <input placeholder="Password" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">
+                                <input placeholder="Name" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Name">   
                             </div>
                             <div class="col-md-6">
                                 <input placeholder="Email" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Email">
-                                <input placeholder="Repeat Password" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Repeat">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input placeholder="Password" type="password" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">
+                            </div>
+                            <div class="col-md-6">
+                                <input placeholder="Repeat Password" type="password" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Repeat">
                             </div>
                         </div>
 
