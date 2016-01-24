@@ -4135,9 +4135,9 @@ EXAMPLE: <div class="ct-topBar" data-starttopbar=300 data-offset="500">
 
         $('.ct-js-slick').attr('data-snap-ignore', 'true'); // Ignore Slick
 
-        $('.ct-menuMobile .ct-menuMobile-navbar .dropdown > a').click(function(e) {
-            return false; // iOS SUCKS
-        });
+        // $('.ct-menuMobile .ct-menuMobile-navbar .dropdown > a').click(function(e) {
+        //     //return false; // iOS SUCKS
+        // });
         $('.ct-menuMobile .ct-menuMobile-navbar .dropdown > a').click(function(e){
             var $this = $(this);
             if($this.parent().hasClass('open')){
