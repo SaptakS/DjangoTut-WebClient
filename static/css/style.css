@@ -4983,7 +4983,7 @@ nav.navbar .container {
   position: relative;
 }
 nav.navbar .navbar-nav > li > a {
-  line-height: 70px;
+  line-height: 60px;
   padding-top: 0;
   padding-bottom: 0;
   color: #2d2d2d;
@@ -5103,6 +5103,10 @@ nav.yamm .navbar-nav .dropdown-menu .yamm-content a:hover {
 }
 .navbar-header a {
   line-height: 100px;
+}
+.navbar-header {
+    margin: 0%;
+    padding-top: 1%;
 }
 .yamm .yamm-content a {
   display: block;
@@ -5275,7 +5279,7 @@ nav.yamm .navbar-nav .dropdown-menu .yamm-content a:hover {
   cursor: pointer;
 }
 nav.navbar-parts .navbar-nav > li > a {
-  line-height: 80px;
+  line-height: 60px;
 }
 nav.navbar-parts .btn-group:hover .dropdown-menu {
   display: block;
@@ -5649,9 +5653,13 @@ nav.navbar-scroll-top.navbar-transparent .ct-navbarSearch--icon:hover {
   nav.navbar .navbar-nav > li > a,
   .ct-navbarSearch--icon,
   .ct-navbarCart {
-    line-height: 80px;
+    line-height: 30px;
     padding: 7px 10px;
     font-size: 16px;
+  }
+
+  nav.navbar .navbar-nav .dropdown-menu li a {
+    font-size: 13px;
   }
   .navbar-headerTop input {
     width: 200px;
