@@ -5104,6 +5104,11 @@ nav.yamm .navbar-nav .dropdown-menu .yamm-content a:hover {
 .navbar-header a {
   line-height: 100px;
 }
+.navbar-header a img {
+  max-width: 200px;
+  position: absolute;
+  top: -14px;
+}
 .navbar-header {
     margin: 0%;
     padding-top: 0%;
@@ -5536,6 +5541,7 @@ nav.navbar-scroll-top.navbar-transparent .ct-navbarSearch--icon:hover {
 }
 .ct-navbarMobile .navbar-brand img {
   display: inline;
+  max-width: 200px;
 }
 .ct-navbarMobile .navbar-toggle {
   position: absolute;
