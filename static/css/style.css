@@ -5106,7 +5106,7 @@ nav.yamm .navbar-nav .dropdown-menu .yamm-content a:hover {
 }
 .navbar-header {
     margin: 0%;
-    padding-top: 1%;
+    padding-top: 0%;
 }
 .yamm .yamm-content a {
   display: block;
@@ -5641,7 +5641,7 @@ nav.navbar-scroll-top.navbar-transparent .ct-navbarSearch--icon:hover {
     float: none;
     display: block;
     text-align: center;
-    padding-top: 2%;
+    padding-top: 0%;
   }
   .navbar-header a {
     line-height: 80px;
