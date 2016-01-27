@@ -1,1 +1,8 @@
-Django==1.9
+Django==1.8
+django-model-utils==2.0.3
+Pillow==2.5.0
+pluggy==0.3.1
+psycopg2==2.6.1
+py==1.4.31
+tox==2.3.1
+virtualenv==13.1.2

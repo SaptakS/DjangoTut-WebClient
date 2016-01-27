@@ -13,8 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="/static/images/demo-content/favicon.png">
-    <link rel="apple-touch-icon" href="/static/images/demo-content/favicon.png">
+    <link rel="shortcut icon" href="/static/images/favicon.jpg">
+    <link rel="apple-touch-icon" href="/static/images/favicon.jpg">
 
     <title>Study Basin</title>
 
@@ -30,10 +30,6 @@
     .ct-navbar--fluid {
         min-width: auto;
     }
-
-    .navbar-header {
-        margin: 2%;
-    }
     </style>
 
     <script src="/static/js/modernizr.custom.js"></script>
@@ -41,7 +37,9 @@
 <body class="cssAnimate ct-headroom--scrollUpMenu"><div class="ct-preloader"><div class="ct-preloader-content"></div></div>
 <nav class="ct-menuMobile">
     <ul class="ct-menuMobile-navbar">
-        <li class="dropdown active"><a href="/home">Home</a></li>
+        <li class="dropdown active"><a href="#">Home</a></li>
+        <li class="dropdown"><a href="#abtus">About</a></li>  
+        <li class="dropdown"><a href="#why">Why join?</a></li>
         <li class="dropdown"><a href="#">Courses</a>
             <ul class="dropdown-menu">
                 <li><a href="/course-single">IPM</a></li>
@@ -50,18 +48,16 @@
                 <li><a href="/course-single">Law</a></li>
             </ul>
         </li>
-        <li class="dropdown"><a href="/contact">Contact Us</a></li>
-        <li class="dropdown"><a href="#why">Why join?</a></li>
-        <li class="dropdown"><a href="/gkdose">GK dose</a></li>
         <li class="dropdown"><a href="/mock">Mock Series</a></li>
-        <li class="dropdown"><a href="/uc">News</a></li>
+        <li class="dropdown"><a href="/gkdose">GK dose</a></li>
         <li class="dropdown"><a href="/uc">Blog</a></li>
-        <li class="dropdown"><a href="#abtus">About</a></li>                
+        <li class="dropdown"><a href="/contact">Contact Us</a></li>
+        <li class="dropdown"><a href="/uc">News</a></li>
     </ul>
 </nav>
 <div id="ct-js-wrapper" class="ct-pageWrapper">
 <div class="ct-navbarMobile">
-    <a class="navbar-brand" href="home"><h3>Study Basin</h3></a>
+    <a class="navbar-brand" href="home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
     <button type="button" class="navbar-toggle">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -71,6 +67,9 @@
 </div>
 <div class="ct-topBar text-center">
     <div class="container">
+        <div class="navbar-header pull-left">
+            <a href="/home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+        </div>
         <ul class="ct-panel--user list-inline text-uppercase pull-right">
             <li><a href="#" class="ct-js-login">login<i class="fa fa-lock"></i></a></li>
             <li><a href="#" class="ct-js-signup">sign up<i class="fa fa-user"></i></a></li>
@@ -80,18 +79,11 @@
 </div>
 <nav class="navbar navbar-default yamm " data-heighttopbar="60px" data-startnavbar="0">
     <div class="container">
-        <div class="navbar-header">
-            <a href="home"><h3>Study Basin</h3></a>
-        </div>
         <div class="ct-navbar--fluid pull-right">
             <ul class="nav navbar-nav ct-navbar--fadeInUp">
-                <li class="dropdown yamm-fw active"><a href="#">Home</a></li>
+                <li class="dropdown yamm-fw active"><a href="#">Home</a></li>  
+                <li class="dropdown yamm-fw"><a href="#abtus">About</a></li>  
                 <li class="dropdown yamm-fw"><a href="#why">Why join?</a></li>
-                <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
-                <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
-                <li class="dropdown yamm-fw"><a href="/uc">News</a></li>
-                <li class="dropdown yamm-fw"><a href="/uc">Blog</a></li>
-                <li class="dropdown yamm-fw"><a href="#abtus">About</a></li>   
                 <li class="dropdown yamm-fw"><a href="/courses-listing">Courses</a>
                     <ul class="dropdown-menu">
                         <li>
@@ -114,7 +106,11 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="/contact">Contact</a></li>
+                <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
+                <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
+                <li class="dropdown yamm-fw"><a href="/uc">Blog</a></li>
+                <li class="dropdown yamm-fw"><a href="/contact">Contact</a></li>
+                <li class="dropdown yamm-fw"><a href="/uc">News</a></li>
             </ul>
         </div>
     </div>
@@ -202,13 +198,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h3 class="text-capitalize ct-fw-900 ct-u-marginBottom40 ct-darkBackground animated" data-fx="fadeInLeft" data-time="200">Created For Education Business</h3>
-                                    <p class="ct-u-marginBottom40 ct-fw-600 animated" data-fx="fadeInLeft" data-time="800">The European languages are members of the same family. Their separ
-                                        vocabulary. The languages only differ in their grammar, their
-                                        on and more common words. If several languages </p>
+                                    <h3 class="text-capitalize ct-fw-900 ct-u-marginBottom40 ct-darkBackground animated" data-fx="fadeInLeft" data-time="200">To teach you</h3>
+                                    <p class="ct-u-marginBottom40 ct-fw-600 animated" data-fx="fadeInLeft" data-time="800">Working day and night to make your learning better.</p>
                                     <a class="text-uppercase btn btn-success btn-lg animated" href="/courses-listing" data-fx="fadeInLeft" data-time="1400">view courses</a>
                                 </div>
-                                <img class="ct-js-imageOffset animated" src="/static/images/demo-content/opened-book.png" data-fx="zoomInUp" data-time="1400" data-bottom="0" data-right="0" alt="person">
+                                <!-- <img class="ct-js-imageOffset animated" src="/static/images/demo-content/opened-book.png" data-fx="zoomInUp" data-time="1400" data-bottom="0" data-right="0" alt="person"> -->
                             </div>
                         </div>
                     </div>
@@ -229,7 +223,7 @@
                                         vidual languages.</p>
                                     <a class="text-uppercase btn btn-transparent btn-bordered--Light btn-lg animated" href="/courses-listing" data-fx="zoomInUp" data-time="1000">view courses</a>
                                 </div>
-                                <img class="ct-js-imageOffset animated" src="/static/images/demo-content/header10-person.png" data-fx="fadeInRight" data-time="1400" data-bottom="-263" data-right="0" alt="person">
+                                <!-- <img class="ct-js-imageOffset animated" src="/static/images/demo-content/header10-person.png" data-fx="fadeInRight" data-time="1400" data-bottom="-263" data-right="0" alt="person"> -->
                             </div>
                         </div>
                     </div>
@@ -505,7 +499,7 @@
 <section class="ct-u-paddingBoth100 text-center ct-u-doubleBorder" id="abtus">
     <div class="container">
         <h2 class="ct-fw-700 ct-u-marginBottom30">About us</h2>
-        <p class="ct-fw-600 ct-u-marginBottom100">Our mission is to usher a new way of education. Anyone can easily learn anything, anywhere they want. We at studyBasin strive towards that goal.
+        <p class="ct-fw-600 ct-u-marginBottom100">We are group of entrepreneur in the field of education working in providing online platform for students to do preparation for various entrance and job examination.
         </p>
         <div class="row">
             <div class="col-sm-6 col-md-3">
@@ -648,7 +642,7 @@
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fa fa-list-alt"></i> Fully Responsive Theme
+                                    <i class="fa fa-list-alt"></i> Time saving
                                 </a>
                             </h4>
                         </div>
@@ -666,7 +660,7 @@
                         <div class="panel-heading" role="tab" id="headingTwo">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <i class="fa fa-angellist"></i> Strategy Solutions
+                                    <i class="fa fa-angellist"></i> Comfort and ease
                                 </a>
                             </h4>
                         </div>
@@ -684,7 +678,7 @@
                         <div class="panel-heading" role="tab" id="headingThree">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fa fa-files-o"></i> Touchable Slider
+                                    <i class="fa fa-files-o"></i> Quick learning
                                 </a>
                             </h4>
                         </div>
@@ -702,7 +696,61 @@
                         <div class="panel-heading" role="tab" id="headingFour">
                             <h4 class="panel-title">
                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <i class="fa fa-desktop"></i> Clean Modern Code
+                                    <i class="fa fa-desktop"></i> Study material and mock tests from masters of that line
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                One morning, when Gregor Samsa woke from troubled dreams, he found him
+                                self transformed in his bed into a horrible vermin. He lay on his armour-like ba
+                                ck, and if he lifted his head a little he could see his brown belly, slightly domed
+                                and divided by arches into stiff sections. The bedding was hardly able to cover
+                                it and seemed ready
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fa fa-desktop"></i> Short cut methods to score well
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                One morning, when Gregor Samsa woke from troubled dreams, he found him
+                                self transformed in his bed into a horrible vermin. He lay on his armour-like ba
+                                ck, and if he lifted his head a little he could see his brown belly, slightly domed
+                                and divided by arches into stiff sections. The bedding was hardly able to cover
+                                it and seemed ready
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fa fa-desktop"></i> Money saving 
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                One morning, when Gregor Samsa woke from troubled dreams, he found him
+                                self transformed in his bed into a horrible vermin. He lay on his armour-like ba
+                                ck, and if he lifted his head a little he could see his brown belly, slightly domed
+                                and divided by arches into stiff sections. The bedding was hardly able to cover
+                                it and seemed ready
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fa fa-desktop"></i> Study from anywhere
                                 </a>
                             </h4>
                         </div>
