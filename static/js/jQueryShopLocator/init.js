@@ -42,7 +42,7 @@
                     "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]
                 }]
             },
-            markersIcon: "assets/images/marker.png",
+            markersIcon: "/static/images/marker.png",
             marker: {
                 latlng: [40.712784, -74.005941]
             }
@@ -82,7 +82,7 @@
                     "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]
                 }]
             },
-            markersIcon: "assets/images/marker.png",
+            markersIcon: "/static/images/marker.png",
             infoBubble: {
                 visible: true,
                 arrowPosition: 50,
@@ -103,9 +103,9 @@
                     widthMD: 56,
                     heightBIG: 75,
                     widthBIG: 75,
-                    iconSmall: "assets/js/jQueryShopLocator/src/style/cosmic/images/clusterSmall.png",
-                    iconMedium: "assets/js/jQueryShopLocator/src/style/cosmic/images/clusterMedium.png",
-                    iconBig: "assets/js/jQueryShopLocator/src/style/cosmic/images/clusterBig.png"
+                    iconSmall: "/static/js/jQueryShopLocator/src/style/cosmic/images/clusterSmall.png",
+                    iconMedium: "/static/js/jQueryShopLocator/src/style/cosmic/images/clusterMedium.png",
+                    iconBig: "/static/js/jQueryShopLocator/src/style/cosmic/images/clusterBig.png"
                 }
             },
             sidebar: {
