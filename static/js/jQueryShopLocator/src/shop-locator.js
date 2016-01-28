@@ -57,7 +57,7 @@
                 arrowSize: 20,
                 arrowPosition: 50,
                 hideCloseButton: false,
-                closeSrc: "assets/js/jQueryShopLocator/src/style/closeButton.svg",
+                closeSrc: "/static/js/jQueryShopLocator/src/style/closeButton.svg",
                 offsetTop: 10,
                 offsetRight: 10,
                 disableAutoPan: false,
@@ -65,7 +65,7 @@
                 getDirectionsButtonName: "Get Directions",
                 directionsUseGeolocation: true
             },
-            markersIcon: "assets/js/jQueryShopLocator/src/style/lollipop/images/marker.png",
+            markersIcon: "/static/js/jQueryShopLocator/src/style/lollipop/images/marker.png",
             marker: {
                 latlng: [52.2296760, 21.0122290],
                 animation: false, //google.maps.Animation.DROP, google.maps.Animation.BOUNCE
@@ -94,9 +94,9 @@
                     widthMD: 54,
                     heightBIG: 60,
                     widthBIG: 54,
-                    iconSmall: "assets/js/jQueryShopLocator/src/style/lollipop/images/clusterSmall.png",
-                    iconMedium: "assets/js/jQueryShopLocator/src/style/lollipop/images/clusterMedium.png",
-                    iconBig: "assets/js/jQueryShopLocator/src/style/lollipop/images/clusterBig.png"
+                    iconSmall: "/static/js/jQueryShopLocator/src/style/lollipop/images/clusterSmall.png",
+                    iconMedium: "/static/js/jQueryShopLocator/src/style/lollipop/images/clusterMedium.png",
+                    iconBig: "/static/js/jQueryShopLocator/src/style/lollipop/images/clusterBig.png"
                 }
             },
             sidebar:{
@@ -104,7 +104,7 @@
                 units: "km",
                 selectSection:{
                     visible: false,
-                    pathToJSONDirectory: "assets/js/jQueryShopLocator/src/json/",
+                    pathToJSONDirectory: "/static/js/jQueryShopLocator/src/json/",
                     difFiles: [["First Region", "markers"], ["Second Region", "diffmarkers"]],
                     fileTypes: "json"
                 },
@@ -159,13 +159,13 @@
         //    - infobubble.js https://github.com/googlemaps/js-info-bubble
         loadDependences: function ( constructor, element, settings) {
             if($('#markerclusterer').length === 0){
-                var src="assets/js/jQueryShopLocator/src/dependences/markerclusterer.js";
+                var src="/static/js/jQueryShopLocator/src/dependences/markerclusterer.js";
                 var sdk = $('<script id="markerclusterer" type="text/javascript"></script>');
                 sdk.attr("src", src);
                 sdk.appendTo($('head'));
             }
             if($('#infobubble').length === 0){
-                var src2="assets/js/jQueryShopLocator/src/dependences/infobubble.js";
+                var src2="/static/js/jQueryShopLocator/src/dependences/infobubble.js";
                 var sdk2 = $('<script id="infobubble" type="text/javascript"></script>');
                 sdk2.attr("src", src2);
                 sdk2.appendTo($('head'));
