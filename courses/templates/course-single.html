@@ -72,10 +72,17 @@
         <div class="navbar-header pull-left">
             <a href="/home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
         </div>
+        {% if user.username %}
         <ul class="ct-panel--user list-inline text-uppercase pull-right">
-            <li><a href="#" class="ct-js-login">login<i class="fa fa-lock"></i></a></li>
-            <li><a href="#" class="ct-js-signup">sign up<i class="fa fa-user"></i></a></li>
+            <li style="width:170px;">Welcome, {{ user.username }}</li>
+            <li><a href="/logout/" >Logout<i class="fa fa-user"></i></a></li>
         </ul>
+        {% else %}
+        <ul class="ct-panel--user list-inline text-uppercase pull-right">
+            <li><a href="/accounts/login/" >login<i class="fa fa-lock"></i></a></li>
+            <li><a href="/register/" >sign up<i class="fa fa-user"></i></a></li>
+        </ul>
+        {% endif %}
         <div class="clearfix"></div>
     </div>
 </div>
