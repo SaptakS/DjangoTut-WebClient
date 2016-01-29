@@ -34,9 +34,9 @@ urlpatterns = [
     url(r'^mock/$', courses_views.mock),
     url(r'^quiz/$', include('quiz.urls')),
     #url(r'^$', 'django.contrib.auth.views.login'),
-    #url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
-    #url(r'^register/$', login_views.register),
-    #url(r'^register/success/$', login_views.register_success),
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
+    url(r'^register/$', login_views.register),
+    url(r'^register/success/$', login_views.register_success),
     #url(r'^home/$', login_views.home),
-    #url(r'^logout/$', login_views.logout_page),
+    url(r'^logout/$', login_views.logout_page),
 ]
