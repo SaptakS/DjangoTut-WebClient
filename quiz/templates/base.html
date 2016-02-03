@@ -8,7 +8,23 @@
 <meta name="description" content="{% block description %}{% endblock %}">
 
 <!-- styles -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="shortcut icon" href="/static/images/favicon.jpg">
+<link rel="apple-touch-icon" href="/static/images/favicon.jpg">
+
+<title>StudyBasin | Admin Panel</title>
+
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<script src="/static/js/modernizr.custom.js"></script>
+
+<!--[if lt IE 9]>
+<script src="/static/bootstrap/js/html5shiv.min.js"></script>
+<script src="/static/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+<style>
+.ct-navbar--fluid {
+    min-width: auto;
+}
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -19,7 +35,54 @@
 
 <body>
 
+<div class="ct-preloader">
+    <div class="ct-preloader-content"></div>
+</div>
+<nav class="ct-menuMobile">
+    <ul class="ct-menuMobile-navbar">
+        <li class="dropdown"><a href="/home">Home</a></li>
+        <li class="dropdown"><a href="/mock">Mock Series</a></li>
+        <li class="dropdown"><a href="/gkdose">GK dose</a></li>
+        <li class="dropdown"><a href="/uc">Blog</a></li>
+        <li class="dropdown"><a href="/uc">News</a></li>
+    </ul>
+</nav>
+<div id="ct-js-wrapper" class="ct-pageWrapper">
+<div class="ct-navbarMobile">
+    <a class="navbar-brand" href="home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+    <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="ct-topBar text-center">
+    <div class="container">
+        <div class="navbar-header pull-left">
+            <a href="/home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+        </div>
+        <ul class="ct-panel--user list-inline text-uppercase pull-right">
+            <li style="width:170px;">Welcome, {{ user.username }}</li>
+            <li><a href="/logout/" >Logout<i class="fa fa-user"></i></a></li>
 
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<nav class="navbar navbar-default yamm " data-heighttopbar="60px" data-startnavbar="0">
+    <div class="container">
+        <div class="ct-navbar--fluid pull-right">
+            <ul class="nav navbar-nav ct-navbar--fadeInUp">
+                <li class="dropdown yamm-fw active"><a href="#">Home</a></li>  
+                <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
+                <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
+                <li class="dropdown yamm-fw"><a href="/uc">Blog</a></li>
+                <li class="dropdown yamm-fw"><a href="/uc">News</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <!-- Before the quiz content -->
 
 <div class="container">
