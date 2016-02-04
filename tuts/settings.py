@@ -100,12 +100,20 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'studybasin',
-        'USER': 'postgres',
-        'PASSWORD': '',
+        'USER': 'saptak',
+        'PASSWORD': 'saptak',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
+
+# Email Details
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'effervescence@iiita.ac.in'
+EMAIL_HOST_PASSWORD = '12345689'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 
