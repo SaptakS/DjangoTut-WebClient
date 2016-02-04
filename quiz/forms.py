@@ -29,7 +29,7 @@ class CreateMCQuestionForm(ModelForm):
 class CreateQuizForm(ModelForm):
     class Meta:
         model = Quiz
-        fields = ['title', 'description', 'url', 'category', 'random_order',
-                'max_questions', 'answers_at_end', 'exam_paper',
-                'single_attempt', 'pass_mark', 'success_text', 'fail_text',
+        fields = ['title', 'description', 'url', 'category', 'random_order',\
+                'max_questions', 'answers_at_end', 'exam_paper',\
+                'single_attempt', 'pass_mark', 'success_text', 'fail_text',\
                 'draft']

@@ -1,14 +1,15 @@
 import random
-
+from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView, TemplateView, FormView
 
-from .forms import QuestionForm, EssayForm
+from .forms import QuestionForm, EssayForm, CreateMCQuestionForm, CreateQuizForm
 from .models import Quiz, Category, Progress, Sitting, Question
 from essay.models import Essay_Question
+from multichoice.models import MCQuestion
 
 
 class QuizMarkerMixin(object):
@@ -377,8 +378,66 @@ def anon_session_score(session, to_add=0, possible=0):
 
     return session["session_score"], session["session_score_possible"]
 
-def create_quiz():
-    return 1
+@user_passes_test(lambda u: u.is_superuser)
+def create_quiz(request):
+    '''View function for creating a quiz '''
 
-def create_mcquestion():
-    return 1
+    if request.method == 'POST':
+        form = CreateQuizForm(request.POST)
+        if form.is_valid():
+            quiz_ = Quiz(\
+                    title=title,\
+                    description=description,\
+                    url=url,\
+                    category=category,\
+                    random_order=random_order,\
+                    max_questions=max_questions,\
+                    answers_at_end=answers_at_end,\
+                    exam_paper=exam_paper,\
+                    single_attempt=single_attempt,\
+                    pass_mark=pass_mark,\
+                    success_text=success_text,\
+                    fail_text=fail_text,\
+                    draft=draft,\
+                )
+            quiz_.save()
+            return HttpResponseRedirect('/quiz/create_mcquestion/')
+    else:
+        form = CreateQuizForm()
+
+    variables = RequestContext(request, {
+        'form': form,
+    })
+
+    return render_to_response(
+            'create_quiz.html',
+            variables,
+    )
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def create_mcquestion(request):
+    ''' View function for creating an multiple choice question '''
+     
+     if request.method == 'POST':
+        form = CreateMCQuestionForm(request.POST)
+        if form.is_valid():
+            question = MCQuestion(
+                    figure=figure,
+                    content=content,
+                    explanation=explanation,
+                    answer_order=answer_order,
+                    )
+            question.save()
+            return HttpResponseRedirect('/quiz/create_mcquestion/')
+    else:
+        form = CreateMCQuestionForm()
+
+    variables = RequestContext(request, {
+        'form': form,
+    })
+
+    return render_to_response(
+            'create_mcquestion.html',
+            variables,
+    )
