@@ -1,6 +1,9 @@
 from django import forms
+from django.forms import ModelForm
 from django.forms.widgets import RadioSelect, Textarea
 
+from models import *
+from multichoice.models import *
 
 class QuestionForm(forms.Form):
     def __init__(self, question, *args, **kwargs):
@@ -15,3 +18,18 @@ class EssayForm(forms.Form):
         super(EssayForm, self).__init__(*args, **kwargs)
         self.fields["answers"] = forms.CharField(
             widget=Textarea(attrs={'style': 'width:100%'}))
+
+
+class CreateMCQuestionForm(ModelForm):
+    class Meta:
+        model = MCQuestion
+        fields = ['figure', 'content', 'explanation', 'answer_order']
+
+
+class CreateQuizForm(ModelForm):
+    class Meta:
+        model = Quiz
+        fields = ['title', 'description', 'url', 'category', 'random_order',
+                'max_questions', 'answers_at_end', 'exam_paper',
+                'single_attempt', 'pass_mark', 'success_text', 'fail_text',
+                'draft']

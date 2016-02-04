@@ -2,7 +2,8 @@ from django.conf.urls import patterns, url
 
 from .views import QuizListView, CategoriesListView,\
     ViewQuizListByCategory, QuizUserProgressView, QuizMarkingList,\
-    QuizMarkingDetail, QuizDetailView, QuizTake
+    QuizMarkingDetail, QuizDetailView, QuizTake, create_quiz,
+    create_mcquestion
 
 
 urlpatterns = patterns('',
@@ -30,6 +31,14 @@ urlpatterns = patterns('',
                        url(regex=r'^marking/(?P<pk>[\d.]+)/$',
                            view=QuizMarkingDetail.as_view(),
                            name='quiz_marking_detail'),
+
+                       url(regex=r'^create_quiz/$',
+                           view=create_quiz,
+                           name='create_quiz'),
+
+                       url(regex=r'^create_mcquestion/$',
+                           view=create_mcquestion,
+                           name='create_mcquestion'),
 
                        #  passes variable 'quiz_name' to quiz_take view
                        url(regex=r'^(?P<slug>[\w-]+)/$',
