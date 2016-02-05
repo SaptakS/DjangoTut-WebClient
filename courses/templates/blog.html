@@ -50,9 +50,9 @@
         </li>
         <li class="dropdown"><a href="/mock">Mock Series</a></li>
         <li class="dropdown active"><a href="/gkdose">GK dose</a></li>
-        <li class="dropdown"><a href="/blog">Blog</a></li>
+        <li class="dropdown"><a href="#">Blog</a></li>
         <li class="dropdown"><a href="/contact">Contact Us</a></li>
-        <li class="dropdown"><a href="/uc">News</a></li>
+        <li class="dropdown"><a href="/news">News</a></li>
     </ul>
 </nav>
 <div id="ct-js-wrapper" class="ct-pageWrapper">
@@ -133,10 +133,10 @@
                     </ul>
                 </li>
                 <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
-                <li class="dropdown yamm-fw active"><a href="#">GK dose</a></li>
-                <li class="dropdown yamm-fw"><a href="/blog">Blog</a></li>
+                <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
+                <li class="dropdown yamm-fw active"><a href="#">Blog</a></li>
                 <li class="dropdown yamm-fw"><a href="/contact">Contact</a></li>
-                <li class="dropdown yamm-fw"><a href="/uc">News</a></li>
+                <li class="dropdown yamm-fw"><a href="/news">News</a></li>
             </ul>
         </div>
     </div>
@@ -158,7 +158,7 @@
 <div class="row">
 <div class="col-md-4">
     <div class="ct-sidebar">
-        <div class="row"> 
+        <div class="row">
             <div class="col-sm-6 col-md-12">
                 <section class="widget ct-widget-categories ct-u-marginBottom100">
                     <div class="widget-inner">
@@ -251,123 +251,138 @@
                     </div>
                 </section>
             </div>
-
         </div>
     </div>
 </div>
 <div class="col-md-8">
     <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="ct-article">
-        <div class="ct-article-media">
-            <img itemprop="image" src="/static/images/demo-content/blog-post1.jpg" alt="blog-post">
-        </div>
-        <div class="ct-article-title">
+        <div class="ct-article-title" style="border-bottom: 1px solid black;">
             <a itemprop="url" href="#"><h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit .</h4></a>
         </div>
-        <ul class="list-unstyled list-inline ct-article-meta">
-            <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
-            <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
-            <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
-        </ul>
-        <div itemprop="text" class="ct-article-description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
-                ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
-                te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
-                Integer tincidunt.
-            </p>
-        </div>
-    </article>
-    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="ct-article">
-        <div class="ct-article-media">
-            <div class="ct-slick ct-js-slick ct-slick-defaultNavigation" data-height="300" data-adaptiveHeight="true" data-animations="true" data-autoplay="true" data-infinite="true" data-autoplaySpeed="6000" data-draggable="true" data-touchMove="false" data-arrows="true" data-items="1">
-                <div class="item">
-                    <img itemprop="image" src="/static/images/demo-content/blog-post2.jpg" alt="blog post">
+        <div class="row" style="margin-right:15px;margin-left:15px;">
+            <div class="ct-article-media" style="display: inline-block;">
+                <img itemprop="image" src="/static/images/demo-content/blog-post1.jpg" alt="blog-post" style="max-width: 330px;height: 300px";>
+            </div>
+            <div style="float: right;width: 54%">
+                <div itemprop="text" class="ct-article-description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
+                        ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
+                        te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
+                        Integer tincidunt.
+                    </p>
                 </div>
-                <div class="item">
-                    <img itemprop="image" src="/static/images/demo-content/blog-post3.jpg" alt="blog post">
-                </div>
-                <div class="item">
-                    <img itemprop="image" src="/static/images/demo-content/blog-post1.jpg" alt="blog post">
-                </div>
+                <ul class="list-unstyled list-inline ct-article-meta">
+                    <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
+                    <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
+                    <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
+                </ul>
+                
             </div>
         </div>
-        <div class="ct-article-title">
-            <a itemprop="url" href="#"><h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit .</h4></a>
-        </div>
-        <ul class="list-unstyled list-inline ct-article-meta">
-            <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
-            <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
-            <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
-        </ul>
-        <div itemprop="text" class="ct-article-description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
-                ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
-                te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
-                Integer tincidunt.
-            </p>
-        </div>
     </article>
     <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="ct-article">
-        <div class="ct-article-media">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe itemprop="video" class="embed-responsive-item" src="http://www.youtube.com/embed/1-l29HlKkXU"></iframe>
+        <div class="ct-article-title" style="border-bottom: 1px solid black;">
+            <a itemprop="url" href="#"><h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit .</h4></a>
+        </div>
+        <div class="row" style="margin-right:15px;margin-left:15px;">
+            <div class="ct-article-media" style="display: inline-block;">
+                <img itemprop="image" src="/static/images/demo-content/blog-post1.jpg" alt="blog-post" style="max-width: 330px;height: 300px";>
+            </div>
+            <div style="float: right;width: 54%">
+                <div itemprop="text" class="ct-article-description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
+                        ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
+                        te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
+                        Integer tincidunt.
+                    </p>
+                </div>
+                <ul class="list-unstyled list-inline ct-article-meta">
+                    <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
+                    <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
+                    <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
+                </ul>
+                
             </div>
         </div>
-        <div class="ct-article-title">
+    </article>
+    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="ct-article">
+        <div class="ct-article-title" style="border-bottom: 1px solid black;">
             <a itemprop="url" href="#"><h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit .</h4></a>
         </div>
-        <ul class="list-unstyled list-inline ct-article-meta">
-            <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
-            <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
-            <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
-        </ul>
-        <div itemprop="text" class="ct-article-description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
-                ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
-                te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
-                Integer tincidunt.
-            </p>
+        <div class="row" style="margin-right:15px;margin-left:15px;">
+            <div class="ct-article-media" style="display: inline-block;">
+                <img itemprop="image" src="/static/images/demo-content/blog-post1.jpg" alt="blog-post" style="max-width: 330px;height: 300px";>
+            </div>
+            <div style="float: right;width: 54%">
+                <div itemprop="text" class="ct-article-description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
+                        ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
+                        te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
+                        Integer tincidunt.
+                    </p>
+                </div>
+                <ul class="list-unstyled list-inline ct-article-meta">
+                    <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
+                    <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
+                    <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
+                </ul>
+                
+            </div>
         </div>
     </article>
     <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="ct-article">
-        <div class="ct-article-title">
+        <div class="ct-article-title" style="border-bottom: 1px solid black;">
             <a itemprop="url" href="#"><h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit .</h4></a>
         </div>
-        <ul class="list-unstyled list-inline ct-article-meta">
-            <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
-            <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
-            <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
-        </ul>
-        <div itemprop="text" class="ct-article-description">
-            <blockquote class="ct-blockquote--dark ct-fw-400">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
-                ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
-                te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
-                Integer tincidunt.
-            </blockquote>
+        <div class="row" style="margin-right:15px;margin-left:15px;">
+            <div class="ct-article-media" style="display: inline-block;">
+                <img itemprop="image" src="/static/images/demo-content/blog-post1.jpg" alt="blog-post" style="max-width: 330px;height: 300px";>
+            </div>
+            <div style="float: right;width: 54%">
+                <div itemprop="text" class="ct-article-description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
+                        ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
+                        te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
+                        Integer tincidunt.
+                    </p>
+                </div>
+                <ul class="list-unstyled list-inline ct-article-meta">
+                    <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
+                    <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
+                    <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
+                </ul>
+                
+            </div>
         </div>
     </article>
     <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="ct-article">
-        <div class="ct-article-media">
-            <img itemprop="image" src="/static/images/demo-content/blog-post3.jpg" alt="blog-post">
-        </div>
-        <div class="ct-article-title">
+        <div class="ct-article-title" style="border-bottom: 1px solid black;">
             <a itemprop="url" href="#"><h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit .</h4></a>
         </div>
-        <ul class="list-unstyled list-inline ct-article-meta">
-            <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
-            <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
-            <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
-        </ul>
-        <div itemprop="text" class="ct-article-description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
-                ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
-                te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
-                Integer tincidunt.
-            </p>
+        <div class="row" style="margin-right:15px;margin-left:15px;">
+            <div class="ct-article-media" style="display: inline-block;">
+                <img itemprop="image" src="/static/images/demo-content/blog-post1.jpg" alt="blog-post" style="max-width: 330px;height: 300px";>
+            </div>
+            <div style="float: right;width: 54%">
+                <div itemprop="text" class="ct-article-description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum so
+                        ntesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputa
+                        te eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiu
+                        Integer tincidunt.
+                    </p>
+                </div>
+                <ul class="list-unstyled list-inline ct-article-meta">
+                    <li class="ct-article-author"><a itemprop="url" href="#"><i class="fa fa-pencil-square-o"></i>by <span itemprop="author">Mohamed</span></a></li>
+                    <li itemprop="dateCreated" class="ct-article-date"><i class="fa fa-clock-o"></i>May 23,2014</li>
+                    <li class="ct-article-comments"><a itemprop="url" href="#"><i class="fa fa-comments-o"></i><span itemprop="commentCount">29</span> Comments</a></li>
+                </ul>
+                
+            </div>
         </div>
     </article>
 </div>
