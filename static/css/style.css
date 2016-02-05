@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:300,400,700,900);
+  @import url(http://fonts.googleapis.com/css?family=Droid+Sans:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600);
 @import "../js/starr/starrr.css";
 @import "../js/jQueryShopLocator/src/style/css/pluginStyle.css";
@@ -80,6 +80,7 @@ Last change:	20 June 2015
   top: 0;
   left: 0;
   display: block;
+  height: 60px;
 }
 .slick-track:before,
 .slick-track:after {
@@ -87,7 +88,7 @@ Last change:	20 June 2015
   content: '';
 }
 .slick-track:after {
-  clear: both;
+  clear: both
 }
 .slick-loading .slick-track {
   visibility: hidden;
@@ -1187,6 +1188,9 @@ img.mfp-img {
 @media (min-width: 1200px) {
   .ct-gallerySingleAjax .ct-flexslider--adjacentVisible {
     height: 580px;
+  }
+  .navbar-header a img {
+    height: 100px;
   }
 }
 @media (max-width: 767px) {
@@ -5105,9 +5109,11 @@ nav.yamm .navbar-nav .dropdown-menu .yamm-content a:hover {
   line-height: 100px;
 }
 .navbar-header a img {
-  max-width: 200px;
+  max-width: 288px;
   position: absolute;
-  top: -14px;
+  top: 0px;
+  left: 0px;
+  z-index: 10000
 }
 .navbar-header {
     margin: 0%;
@@ -5548,6 +5554,7 @@ nav.navbar-scroll-top.navbar-transparent .ct-navbarSearch--icon:hover {
   top: 10px;
   left: 0;
   float: left;
+  display: block;
 }
 .ct-navbarMobile .navbar-toggle .icon-bar {
   background-color: #333;
@@ -5670,21 +5677,32 @@ nav.navbar-scroll-top.navbar-transparent .ct-navbarSearch--icon:hover {
   .navbar-headerTop input {
     width: 200px;
   }
-}
-@media (min-width: 768px) {
-  .ct-navbarMobile,
-  .ct-menuMobile,
-  .ct-navbarCart--mobile {
+  .navbar-wrapper {
     display: none;
   }
+}
+@media (min-width: 993px) {
+  .ct-navbarMobile,
+  .ct-menuMobile,
+  .ct-navbarCart--mobile,
+  .navbar-toggle {
+    display: none;
+  }
+ 
+
+
+}
+@media (min-width: 768px) {
   .navbar,
   .ct-topBar {
     display: block;
   }
 }
 @media (max-width: 768px) {
-  .navbar-wrapper,
   .navbar-wrapperBig {
+    display: none;
+  }
+  .navbar {
     display: none;
   }
 }
@@ -8251,6 +8269,10 @@ header .ct-showcaseBox--withImagePerson .ct-u-displayTableCell:first-child {
 }
 .ct-showcaseBox--withImagePerson img {
   position: absolute;
+  display: inline-block;
+}
+.ct-showcaseBox--withImagePerson .col-md-6 {
+  text-align: center;
 }
 .ct-showcaseBox--ImageMoveRight img {
   position: relative;
@@ -8280,15 +8302,18 @@ header .ct-showcaseBox--withImagePerson .ct-u-displayTableCell:first-child {
   border-radius: 3px;
 }
 .panel-group .panel-default {
+  background: transparent;
   border: 1px solid #eff2f7;
   box-shadow: none;
+  color: white;
 }
 .panel-group .panel-heading {
+  color: white;
   padding: 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: transparent;
 }
 .panel-group .panel-heading .panel-body {
   border-top: 1px solid #eff2f7;
@@ -8586,7 +8611,7 @@ header .ct-showcaseBox--withImagePerson .ct-u-displayTableCell:first-child {
 .ct-slick-inner {
   display: table;
   width: 100%;
-  height: 100%;
+  padding-top: 4%;
 }
 .ct-slick-inner .ct-slick-content {
   display: table-cell;
@@ -8880,7 +8905,7 @@ footer .ct-navbar--footer li a:hover {
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  line-height: 124px;
+  line-height: 66px;
 }
 .widget-socialsFullWidth a {
   display: block;
@@ -10168,6 +10193,13 @@ textarea.ct-input--type1.form-control {
   .ct-textBox .ct-productBox--inline .ct-productMeta {
     position: relative;
   }
+  .navbar-header a img {
+    max-width: 215px;
+    top: -8px;
+  }
+  .ct-slick-inner {
+    height: 100%;
+  }
 }
 @media (max-width: 992px) {
   .ct-productBox {
@@ -10762,4 +10794,7 @@ blockquote {
 }
 .progress-bar-primary {
   background-color: #22A7F0;
+}
+.ct-showcaseBox {
+  padding-top: 4%;
 }

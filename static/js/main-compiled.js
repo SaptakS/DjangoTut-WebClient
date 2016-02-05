@@ -4502,9 +4502,9 @@ EXAMPLE: <div class="ct-topBar" data-starttopbar=300 data-offset="500">
             var bg = validatedata($slide_item.attr('data-bg'), false);
             if (bg) {
               if($("html").hasClass("ie8")){
-                $slide_item.css('background', 'url("' + bg + '")');
+                $slide_item.css('background', '#22A7F0');
               }else{
-                $slide_item.css('background-image', 'url("' + bg + '")');
+                $slide_item.css('background', '#22A7F0');
               }
             }
           });
