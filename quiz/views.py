@@ -376,3 +376,9 @@ def anon_session_score(session, to_add=0, possible=0):
         session["session_score_possible"] += possible
 
     return session["session_score"], session["session_score_possible"]
+
+def create_quiz():
+    return 1
+
+def create_mcquestion():
+    return 1

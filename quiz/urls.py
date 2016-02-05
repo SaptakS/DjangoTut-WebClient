@@ -2,8 +2,7 @@ from django.conf.urls import patterns, url
 
 from .views import QuizListView, CategoriesListView,\
     ViewQuizListByCategory, QuizUserProgressView, QuizMarkingList,\
-    QuizMarkingDetail, QuizDetailView, QuizTake, create_quiz,
-    create_mcquestion
+    QuizMarkingDetail, QuizDetailView, QuizTake, create_quiz, create_mcquestion
 
 
 urlpatterns = patterns('',
