@@ -10194,8 +10194,8 @@ textarea.ct-input--type1.form-control {
     position: relative;
   }
   .navbar-header a img {
-    max-width: 215px;
-    top: -8px;
+    /*max-width: 215px;
+    top: -8px;*/
   }
   .ct-slick-inner {
     height: 100%;

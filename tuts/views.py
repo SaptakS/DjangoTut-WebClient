@@ -20,8 +20,8 @@ def contacts(request):
             email = request.POST.get('email')
             phone = request.POST.get('phone')
             message = request.POST.get('message')
-            send_mail('Contact Form Mail from - ' + name, message, email, ['effervescence@iiita.ac.in'], fail_silently=False)     
-            send_mail('Thank You for Contacting Us', "Thanks for contacting us. We will get back to you soon", 'effervescence@iiita.ac.in', [email], fail_silently=False)
+            send_mail('Contact Form Mail from - ' + name, message, email, ['info@studybasin.com'], fail_silently=False)     
+            send_mail('Thank You for Contacting Us', "Thanks for contacting us. We will get back to you soon", 'info@studybasin.com', [email], fail_silently=False)
 
             return HttpResponseRedirect(reverse('/contact'))
     else:

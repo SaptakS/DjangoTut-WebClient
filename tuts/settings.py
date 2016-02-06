@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'login',
     'courses',
     'quiz',
@@ -109,9 +110,9 @@ DATABASES = {
 
 # Email Details
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'effervescence@iiita.ac.in'
-EMAIL_HOST_PASSWORD = '12345689'
+EMAIL_HOST = 'smtp.studybasin.com'
+EMAIL_HOST_USER = 'info@studybasin.com'
+EMAIL_HOST_PASSWORD = 'dAJIwbZ8'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

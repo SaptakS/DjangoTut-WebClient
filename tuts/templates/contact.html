@@ -244,12 +244,12 @@
     </div>
 </div>
 <section class="ct-u-backgroundLightGreen">
-    <div class="ct-googleMap ct-js-googleMap"></div>
+    
     <div class="ct-u-paddingBoth100">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h4 class="text-uppercase ct-fw-700 ct-u-marginBottom100 ct-u-textNormal">Leave a reply</h4>
+                    <h4 class="text-uppercase ct-fw-700 ct-u-marginBottom50 ct-u-textNormal">Leave a reply</h4>
                     <div class="successMessage alert alert-success ct-u-marginTop20" style="display:none;">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                         Message Sent.
@@ -258,27 +258,29 @@
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                         An error occured. Please try again later.
                     </div>
-                    <form action="http://uacademy.html.themeforest.createit.pl//static/form/send.php" method="POST" class="validateIt">
+                    {% load widget_tweaks %}
+                    <form action="." method="POST" class="validateIt">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group ct-u-marginBottom30">
-                                    <input id="contact_name" data-error-message="Name" placeholder="Name" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg" title="Name">
+                                    {{ form.name|add_class:"form-control ct-input--type1 input-hg"|attr:"placeholder : Name"|attr:"id : contact_name" }}
                                     <label for="contact_name" class="sr-only"></label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group ct-u-marginBottom30">
-                                    <input id="contact_email" data-error-message="Email" placeholder="Email" required="" name="field[]" type="email" class="form-control ct-input--type1 input-hg h5-email" title="Email">
+                                    {{ form.email|add_class:"form-control ct-input--type1 input-hg h5-email"|attr:"placeholder : Email"|attr:"id : contact_email" }}
                                     <label for="contact_email" class="sr-only"></label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group  ct-u-marginBottom30">
-                            <input id="contact_phone" placeholder="Website" name="field[]" type="tel" class="form-control h5-phone ct-input--type1 input-hg" title="Phone">
+                            {{ form.phone|add_class:"form-control h5-phone ct-input--type1 input-hg"|attr:"placeholder : Contact No."|attr:"id : contact_phone" }}
                             <label for="contact_phone" class="sr-only"></label>
                         </div>
                         <div class="form-group  ct-u-marginBottom30">
-                            <textarea id="contact_message" data-error-message="Message is required" placeholder="Your Message" class="form-control ct-input--type1" rows="6" name="field[]" required="" title="Message"></textarea>
+                            {{ form.message|add_class:"form-control ct-input--type1"|attr:"placeholder : Your Message"|attr:"id : contact_message" }}
                             <label for="contact_message" class="sr-only"></label>
                         </div>
 
@@ -287,21 +289,11 @@
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <div class="ct-addressInformation">
-                        <h4 class="text-uppercase ct-fw-700 ct-u-marginBottom20 ct-u-textNormal">Postal Address :</h4>
-                        <p class="ct-u-marginBottom20">PO Box 16122 Collins Street West
-                            Victoria 8007 Australia
-                        </p>
-                        <h4 class="text-uppercase ct-fw-700 ct-u-marginBottom20 ct-u-textNormal">Headquarters :</h4>
-                        <p class="ct-u-marginBottom20">121 King Street, Melbourne
-                            Victoria 3000 Australia
-                        </p>
+                    <div class="ct-addressInformation">                        
                         <h4 class="text-uppercase ct-fw-700 ct-u-marginBottom20 ct-u-textNormal">Phone :</h4>
-                        <span>Phone Number: (123) 456 7890</span>
-                        <span class="ct-u-marginBottom20">Fax Number: (123) 456 7890</span>
+                        <span>Phone Number: (+91) 9450691106</span>
                         <h4 class="text-uppercase ct-fw-700 ct-u-marginBottom20 ct-u-textNormal">Email :</h4>
-                        <span>Support: <a href="#">Support@example.com </a></span>
-                        <span>Support: <a href="#">Sales@example.com </a></span>
+                        <span> info@studybasin.com </a></span>
                     </div>
                 </div>
             </div>
@@ -354,10 +346,8 @@
 </div>
 
 <!-- JavaScripts -->
-<script id="googleMap" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry"></script>
+
 <script src="/static/js/main-compiled.js"></script>
-<script src="/static/js/jQueryShopLocator/src/shop-locator.js"></script>
-<script src="/static/js/jQueryShopLocator/init.js"></script>
 
 
 <!-- switcher 
