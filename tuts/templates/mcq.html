@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Basin">
+    <meta name="author" content="CreateIT">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="/static/images/favicon.jpg">
+    <link rel="apple-touch-icon" href="/static/images/favicon.jpg">
+
+    <title>Study Basin - Under Construction</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="/static/bootstrap/js/html5shiv.min.js"></script>
+    <script src="/static/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .modal-header {
+            padding: 25px 44px;
+        }
+
+        .question-body {
+            padding-left: 7%;
+            padding-top: 4%;
+            border-bottom: 1px solid #f4f4f4;
+        }
+        .modal-body .form-group {
+            padding-left: 38px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+        label.btn span {
+            font-size: 1.5em;
+            vertical-align: top;
+        }
+
+        label input[type="radio"] ~ i.fa.fa-circle-o{
+            color: #c8c8c8;    display: inline;
+        }
+        label input[type="radio"] ~ i.fa.fa-check-circle-o{
+            display: none;
+        }
+        label input[type="radio"]:checked ~ i.fa.fa-circle-o{
+            display: none;
+        }
+        label input[type="radio"]:checked ~ i.fa.fa-check-circle-o{
+            color: #7AA3CC;    display: inline;
+        }
+        label:hover input[type="radio"] ~ i.fa {
+            color: #7AA3CC;
+        }
+        div[data-toggle="buttons"] label.active{
+            color: #7AA3CC;
+        }
+        div[data-toggle="buttons"] label {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 2em;
+            text-align: left;
+            white-space: nowrap;
+            vertical-align: top;
+            cursor: pointer;
+            background-color: none;
+            border: 0px solid 
+            #c8c8c8;
+            border-radius: 3px;
+            color: #c8c8c8;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        div[data-toggle="buttons"] label:hover {
+            color: #7AA3CC;
+        }
+
+        div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    </style>
+
+    <script src="/static/js/modernizr.custom.js"></script>
+</head>
+<body class="cssAnimate ct-headroom--scrollUpMenu">
+<div class="ct-preloader"><div class="ct-preloader-content"></div></div>
+<nav class="ct-menuMobile">
+    <ul class="ct-menuMobile-navbar">
+        <li class="dropdown"><a href="/home">Home</a></li>
+        <li class="dropdown"><a href="/home#abtus">About</a></li>  
+        <li class="dropdown"><a href="/home#why">Why join?</a></li>
+        <li class="dropdown"><a href="#">Courses</a>
+            <ul class="dropdown-menu">
+                <li><a href="/course-single">IPM</a></li>
+                <li><a href="/course-single">Hotel Management</a></li>
+                <li><a href="/course-single">BBA</a></li>
+                <li><a href="/course-single">Law</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="/mock">Mock Series</a></li>
+        <li class="dropdown"><a href="/gkdose">GK dose</a></li>
+        <li class="dropdown"><a href="/blog">Blog</a></li>
+        <li class="dropdown"><a href="/contact">Contact Us</a></li>
+        <li class="dropdown"><a href="/news">News</a></li>
+    </ul>
+</nav>
+
+<div id="ct-js-wrapper" class="ct-pageWrapper">
+    <div class="ct-navbarMobile">
+        <a class="navbar-brand" href="/home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+        <button type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="ct-topBar text-center">
+        <div class="container">
+            <div class="navbar-header pull-left">
+                <a href="/home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+            </div>
+            {% if user.username %}
+            <ul class="ct-panel--user list-inline text-uppercase pull-right">
+                <li style="width:170px;">Welcome, {{ user.username }}</li>
+                <li><a href="/logout/" >Logout<i class="fa fa-user"></i></a></li>
+            </ul>
+            {% else %}
+            <ul class="ct-panel--user list-inline text-uppercase pull-right">
+                <li><a href="/accounts/login/" >login<i class="fa fa-lock"></i></a></li>
+                <li><a href="/register/" >sign up<i class="fa fa-user"></i></a></li>
+            </ul>
+            {% endif %}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-parts  yamm " data-heighttopbar="60px" data-startnavbar="0">
+        <!-- <div class="navbar-headerTop">
+            <div class="container">
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-md dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-bars"></i> Browse Courses
+                    </button>
+                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">IPM</a></li>
+                        <li><a href="#">Law</a></li>
+                        <li><a href="#">Hotel Management</a></li>
+                        <li><a href="#">BBA</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-header">
+                    <a href="/home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="ct-navbar--fluid pull-right">
+                <ul class="nav navbar-nav ct-navbar--fadeInUp">
+                    <li class="dropdown yamm-fw"><a href="/home">Home</a></li>  
+                    <li class="dropdown yamm-fw"><a href="/home#abtus">About</a></li>  
+                    <li class="dropdown yamm-fw"><a href="/home#why">Why join?</a></li>
+                    <li class="dropdown yamm-fw"><a href="/courses-listing">Courses</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <a href="/courses-single">IPM</a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="/course-single">Hotel Management</a>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <a href="/course-single">Law</a>
+                                        </div>
+                                        <div class="col-sm-3">    
+                                            <a href="/course-single">BBA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
+                    <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
+                    <li class="dropdown yamm-fw"><a href="/blog">Blog</a></li>
+                    <li class="dropdown yamm-fw"><a href="/contact">Contact</a></li>
+                    <li class="dropdown yamm-fw"><a href="/news">News</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ct-site--map ct-u-backgroundGradient">
+        <div class="container">
+            <div class="ct-u-displayTableVertical text-capitalize">
+                <div class="ct-u-displayTableCell">
+                    <span class="ct-u-textBig">
+                        MCQ Quiz
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="ct-u-paddingBoth30 ct-blog" itemscope itemtype="http://schema.org/Blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <div class="item">
+                        <div class="header">
+                            <h4 class="header pull-left">
+                                Quiz
+                            </h4>
+                            <h4 class="pull-right">
+                                3 Questions Left
+                            </h4>
+                        </div>
+                        <div class="body-q">
+                            <div class="question">
+                                1. The question is what ?
+                            </div>
+                            <div class="options">
+                                <form class=""
+                            </div>
+                        </div>
+                    </div>
+                     -->
+                     <div class="ct-modal ct-js-modal-signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-uppercase pull-left">Quiz</h5>
+                                    <h5 class="modal-title text-uppercase pull-right">3 questions left</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="question-body">
+                                        <h4 class="modal-title">Question goes here?</h4>
+                                    </div>
+                                    <div class="choice-body">
+                                        <form class="ct-u-paddinbBottom20" method="post" action=".">
+                                            <div class="form-group ct-u-marginBottom10">
+                                                <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                                                    <label class="btn active">
+                                                      <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> <span>  Male</span>
+                                                    </label>
+                                                    <label class="btn active">
+                                                      <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> <span>  Male</span>
+                                                    </label>
+                                                    <label class="btn active">
+                                                      <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> <span>  Male</span>
+                                                    </label>
+                                                    <label class="btn active">
+                                                      <input type="radio" name='gender1'><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i> <span>  Male</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <input type="submit" class="btn btn-primary btn-lg text-uppercase" value="submit"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="ct-prefooter">
+            <div class="widget widget-socialsFullWidth">
+                <div class="widget-inner">
+                    <div class="container">
+                        <div class="ct-slick ct-js-slick text-center" data-adaptiveHeight="true" data-animations="true" data-autoplay="true" data-infinite="false" data-autoplaySpeed="6000" data-draggable="true" data-touchMove="false" data-arrows="false" data-XSitems="1" data-SMitems="2" data-MDitems="4" data-LGitems="4" data-items="1">
+                            <div class="item">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ct-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled list-inline ct-copyright">
+                            <li>Copyright 2015</li>
+                            <li>Created by</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled list-inline ct-footer-menu">
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/home#abtus">About</a></li>
+                            <li><a href="/home#why">Why Join?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- JavaScripts -->
+
+<script src="/static/js/main-compiled.js"></script>
+
+
+<!-- switcher --
+<script src="demo/js/demo.js"></script>
+<script type="text/javascript">
+    $('head').append('<link rel="stylesheet" type="text/css" href="demo/css/demo.css">');
+    $('head').append('<link rel="stylesheet" type="text/css" href="demo/generator.css">');
+</script>
+
+<!-- end switcher -->
+</body>
+</html>

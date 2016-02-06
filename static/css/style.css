@@ -8447,6 +8447,7 @@ header .ct-showcaseBox--withImagePerson .ct-u-displayTableCell:first-child {
   color: #afafaf;
   font-family: "Open Sans", sans-serif;
   font-style: italic;
+  font-size: 2rem;
 }
 .ct-productBox .ct-productMeta {
   text-align: center;
@@ -9456,7 +9457,7 @@ ul {
 }
 .ct-article {
   font-family: "Lato", sans-serif;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .ct-article .ct-article-media {
   margin-bottom: 20px;
