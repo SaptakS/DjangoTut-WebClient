@@ -12,7 +12,7 @@ from django.views.generic import DetailView, ListView, TemplateView, FormView
 from .forms import QuestionForm, EssayForm, CreateMCQuestionForm, CreateQuizForm
 from .models import Quiz, Category, Progress, Sitting, Question
 from essay.models import Essay_Question
-from multichoice.models import MCQuestion
+from multichoice.models import MCQuestion, Answer
 
 
 class QuizMarkerMixin(object):
@@ -386,36 +386,23 @@ def create_quiz(request):
     '''View function for creating a quiz '''
 
     if request.method == 'POST':
-        form = CreateQuizForm(request.POST)
-        title = request.POST.get('title', 'no title')
-        description = request.POST.get('description', 'no desc')
-        url = request.POST.get('url', 'no url')
-        category = request.POST.get('category', 1)
-        random_order = request.POST.get('random_order', True)
-        max_questions = int(request.POST.get('max_questions', 20))
-        answers_at_end = request.POST.get('answers_at_end', True)
-        exam_paper = request.POST.get('exam_paper', True)
-        single_attempt = request.POST.get('single_attempt', True)
-        pass_mark = int(request.POST.get('pass_mark',40))
-        success_text = request.POST.get('success_text', 'passed')
-        fail_text = request.POST.get('fail_text', 'failed')
-        draft = request.POST.get('draft', False)
+        form = CreateQuizForm(request.POST)        
 
         if form.is_valid():
+            title = request.POST.get('title', 'no title')
+            description = request.POST.get('description', 'no desc')
+            url = request.POST.get('url', 'no url')
+            category_id = int(request.POST.get('category'))
+            category = Category.objects.get(id=category_id)
+            max_questions = int(request.POST.get('max_questions', 20))
+            pass_mark = int(request.POST.get('pass_mark',40))
             quiz_ = Quiz.objects.create(\
                     title=title,\
                     description=description,\
-                    url=url,\
-                    #category=category,\
-                    random_order=random_order,\
+                    url=title.replace(" ", "-"),\
+                    category=category,\
                     max_questions=max_questions,\
-                    answers_at_end=answers_at_end,\
-                    exam_paper=exam_paper,\
-                    single_attempt=single_attempt,\
-                    pass_mark=pass_mark,\
-                    success_text=success_text,\
-                    fail_text=fail_text,\
-                    draft=draft,\
+                    pass_mark = pass_mark
                 )
             quiz_.save()
             request.session['quiz'] = quiz_.id
@@ -444,18 +431,44 @@ def create_mcquestion(request):
             quiz = request.session['quiz']
         form = CreateMCQuestionForm(request.POST)
         content = request.POST.get('content', 'Is this an empty question ?')
-        explanation = request.POST.get('explanation',
-                'Your teacher doesn\'t want to explain things')
         answer_order = request.POST.get('answer_order', 'random')
+        correct_ans = request.POST.get('correct_ans')
+        wrong_ans1 = request.POST.get('wrong_ans1')
+        wrong_ans2 = request.POST.get('wrong_ans2')
+        wrong_ans3 = request.POST.get('wrong_ans3')
         if form.is_valid():
             question = MCQuestion.objects.create(
-                    #figure=figure,
                     content=content,
-                    explanation=explanation,
                     answer_order=answer_order,
                     )
             question.quiz.add(quiz)
             question.save()
+            question_id = question.id
+
+            correct = Answer.objects.create(
+                     question=question,
+                     content=correct_ans,
+                     correct=True)
+            correct.save()
+
+            wrong1 = Answer.objects.create(
+                     question=question,
+                     content=wrong_ans1,
+                     correct=False)
+            wrong1.save()
+
+            wrong2 = Answer.objects.create(
+                     question=question,
+                     content=wrong_ans2,
+                     correct=False)
+            wrong2.save()
+
+            wrong3 = Answer.objects.create(
+                     question=question,
+                     content=wrong_ans3,
+                     correct=False)
+            wrong3.save()
+
             return HttpResponseRedirect('/quiz/create_mcquestion/')
     else:
         form = CreateMCQuestionForm()
@@ -468,3 +481,4 @@ def create_mcquestion(request):
             'create_mcquestion.html',
             variables,
     )
+
