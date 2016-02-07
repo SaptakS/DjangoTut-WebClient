@@ -23,7 +23,7 @@ class EssayForm(forms.Form):
 class CreateMCQuestionForm(ModelForm):
     class Meta:
         model = CustomMCQuestion
-        fields = ['content', 'answer_order', 'correct_ans', 'wrong_ans1', 'wrong_ans2', 'wrong_ans3']
+        fields = ['content', 'explanation', 'answer_order', 'correct_ans', 'wrong_ans1', 'wrong_ans2', 'wrong_ans3']
 
 
 class CreateQuizForm(ModelForm):

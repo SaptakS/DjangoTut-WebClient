@@ -65,26 +65,18 @@ class CustomMCQuestion(Question):
 
     correct_ans = models.CharField(max_length=50,
                                blank=False,
-                               help_text=_("Enter the answer text that "
-                                           "you want displayed"),
                                verbose_name=_("Corect Answer"))
 
     wrong_ans1 = models.CharField(max_length=50,
                                blank=False,
-                               help_text=_("Enter the answer text that "
-                                           "you want displayed"),
                                verbose_name=_("Wrong Option 1"))
 
     wrong_ans2 = models.CharField(max_length=50,
                                blank=False,
-                               help_text=_("Enter the answer text that "
-                                           "you want displayed"),
                                verbose_name=_("Wrong Option 2"))
 
     wrong_ans3 = models.CharField(max_length=50,
                                blank=False,
-                               help_text=_("Enter the answer text that "
-                                           "you want displayed"),
                                verbose_name=_("Wrong Option 3"))
 
     def check_if_correct(self, guess):
