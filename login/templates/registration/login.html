@@ -130,13 +130,12 @@
                 {% if form.errors %}
                     <p>Your username and password didn't match. Please try again.</p>
                 {% endif %}
+                {% load widget_tweaks %}
                 <form class="ct-u-paddingBottom100" method="POST" action=".">
                     {% csrf_token %}
                     <div class="form-group ct-u-marginBottom50">
-                        <table border="0">
-                            <tr><th><label for="id_username">Username:</label></th><td>{{ form.username }}</td></tr>
-                            <tr><th><label for="id_password">Password:</label></th><td>{{ form.password }}</td></tr>
-                        </table>
+                        {{ form.username|add_class:"form-control ct-input--type1 input-hg ct-u-marginBottom20"|attr:"placeholder : Username" }}
+                        {{ form.password|add_class:"form-control ct-input--type1 input-hg ct-u-marginBottom20"|attr:"placeholder : Password" }}
                         <!--<input placeholder="E-mail" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Login">
                         <input placeholder="Password" type="password" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">-->
                         <!--<div class="ct-checbox--custom">

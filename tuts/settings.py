@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'login',
     'courses',
     'quiz',
@@ -85,7 +86,7 @@ WSGI_APPLICATION = 'tuts.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -94,18 +95,26 @@ DATABASES = {
         'HOST': '',
         'PORT': '',
     }
-}
+}'''
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'studybasin',
-        'USER': 'postgres',
-        'PASSWORD': '',
+        'USER': 'saptak',
+        'PASSWORD': 'saptak',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
-}'''
+}
+
+# Email Details
+
+EMAIL_HOST = 'smtp.studybasin.com'
+EMAIL_HOST_USER = 'info@studybasin.com'
+EMAIL_HOST_PASSWORD = 'dAJIwbZ8'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 

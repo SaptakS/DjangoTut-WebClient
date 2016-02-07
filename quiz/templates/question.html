@@ -1,7 +1,201 @@
-{% extends "base.html" %}
 {% load i18n%}
 
 {% load quiz_tags %}
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+
+<!-- styles -->
+<link rel="shortcut icon" href="/static/images/favicon.jpg">
+<link rel="apple-touch-icon" href="/static/images/favicon.jpg">
+
+<title>{{ quiz.title }}</title>
+
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<script src="/static/js/modernizr.custom.js"></script>
+
+<!--[if lt IE 9]>
+<script src="/static/bootstrap/js/html5shiv.min.js"></script>
+<script src="/static/bootstrap/js/respond.min.js"></script>
+<![endif]-->
+<style>
+.ct-navbar--fluid {
+    min-width: auto;
+}
+</style>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div class="ct-preloader">
+    <div class="ct-preloader-content"></div>
+</div>
+<nav class="ct-menuMobile">
+    <ul class="ct-menuMobile-navbar">
+        <li class="dropdown"><a href="/home">Home</a></li>
+        <li class="dropdown"><a href="/mock">Mock Series</a></li>
+        <li class="dropdown"><a href="/gkdose">GK dose</a></li>
+        <li class="dropdown"><a href="/blog">Blog</a></li>
+        <li class="dropdown"><a href="/news">News</a></li>
+    </ul>
+</nav>
+<div id="ct-js-wrapper" class="ct-pageWrapper">
+<div class="ct-navbarMobile">
+    <a class="navbar-brand" href="home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+    <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="ct-topBar text-center">
+    <div class="container">
+        <div class="navbar-header pull-left">
+            <a href="/home"><img src="/static/images/logo.jpg" alt="logo"></img></a>
+        </div>
+        <ul class="ct-panel--user list-inline text-uppercase pull-right">
+            <li style="width:170px;">Welcome, {{ user.username }}</li>
+            <li><a href="/logout/" >Logout<i class="fa fa-user"></i></a></li>
+
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<nav class="navbar navbar-default yamm " data-heighttopbar="60px" data-startnavbar="0">
+    <div class="container">
+        <div class="ct-navbar--fluid pull-right">
+            <ul class="nav navbar-nav ct-navbar--fadeInUp">
+                <li class="dropdown yamm-fw active"><a href="#">Home</a></li>  
+                <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
+                <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
+                <li class="dropdown yamm-fw"><a href="/blog">Blog</a></li>
+                <li class="dropdown yamm-fw"><a href="/news">News</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="ct-site--map ct-u-backgroundGradient">
+    <div class="container">
+        <div class="ct-u-displayTableVertical text-capitalize">
+            <div class="ct-u-displayTableCell">
+                <span class="ct-u-textBig">
+                   {{ quiz.title }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="ct-u-paddingBoth30 ct-blog" itemscope itemtype="http://schema.org/Blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                 <div class="ct-modal ct-js-modal-signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">                            
+                            <div class="modal-body">
+                                <div class="text-center">
+                                    <h2 class="modal-title ct-u-paddingTop50">Question: {{ question.content }}</h2><hr>
+                                </div>
+                                <div class="choice-body">
+                                    <form class="ct-u-paddingBottom20" method="post" action=".">
+                                    	{% csrf_token %}
+  										<input type=hidden name="question_id" value="{{ question.id }}">
+                                        <div class="form-group ct-u-marginBottom10">
+                                            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                                            	{% for answer in form.answers %}
+                                                <label class="btn btn-option">
+                                                  {{ answer }}
+                                                </label>
+
+												{% endfor %}
+
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <input type="submit" class="btn btn-primary ct-u-marginBottom50 btn-lg text-uppercase" value="submit"/>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="ct-prefooter">
+            <div class="widget widget-socialsFullWidth">
+                <div class="widget-inner">
+                    <div class="container">
+                        <div class="ct-slick ct-js-slick text-center" data-adaptiveHeight="true" data-animations="true" data-autoplay="true" data-infinite="false" data-autoplaySpeed="6000" data-draggable="true" data-touchMove="false" data-arrows="false" data-XSitems="1" data-SMitems="2" data-MDitems="4" data-LGitems="4" data-items="1">
+                            <div class="item">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ct-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled list-inline ct-copyright">
+                            <li>Copyright 2015</li>
+                            <li>Created by</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled list-inline ct-footer-menu">
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/home#abtus">About</a></li>
+                            <li><a href="/home#why">Why Join?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- JavaScripts -->
+
+<script src="/static/js/main-compiled.js"></script>
+
+
+<!-- switcher --
+<script src="demo/js/demo.js"></script>
+<script type="text/javascript">
+    $('head').append('<link rel="stylesheet" type="text/css" href="demo/css/demo.css">');
+    $('head').append('<link rel="stylesheet" type="text/css" href="demo/generator.css">');
+</script>
+
+<!-- end switcher -->
+</body>
+</html>
+<!-- Before the quiz content 
 
 {% block title %} {{ quiz.title }} {% endblock %}
 {% block description %} {{ quiz.title }} - {{ quiz.description }} {% endblock %}
@@ -80,3 +274,4 @@
 
 
 {% endblock %}
+-->

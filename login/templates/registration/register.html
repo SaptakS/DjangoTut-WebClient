@@ -126,29 +126,28 @@
                 <h3 class="modal-title text-uppercase">Signup</h3>
             </div>
             <div class="modal-body">
+                {% load widget_tweaks %}
                 <form class="ct-u-paddingBottom100" method="post" action=".">
                     <div class="form-group ct-u-marginBottom50">
                     	{% csrf_token %}
-				        <table border="0">
-				            {{ form.as_table }}
-				        </table>
-                       <!--<div class="row">
+				        
+                       <div class="row">
                             <div class="col-md-6">
-                                <input placeholder="Name" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Name">   
+                                {{ form.username|add_class:"form-control ct-input--type1 input-hg ct-u-marginBottom20"|attr:"placeholder : Username" }}                                
                             </div>
                             <div class="col-md-6">
-                                <input placeholder="Email" type="text" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Email">
+                                {{ form.email|add_class:"form-control ct-input--type1 input-hg ct-u-marginBottom20"|attr:"placeholder : Email" }}  
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <input placeholder="Password" type="password" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Password">
+                                {{ form.password1|add_class:"form-control ct-input--type1 input-hg ct-u-marginBottom20"|attr:"placeholder : Password" }}  
                             </div>
                             <div class="col-md-6">
-                                <input placeholder="Repeat Password" type="password" required="" name="field[]" class="form-control ct-input--type1 input-hg ct-u-marginBottom50" title="Repeat">
+                                {{ form.password2|add_class:"form-control ct-input--type1 input-hg ct-u-marginBottom20"|attr:"placeholder : Re-Enter Password" }}  
                             </div>
                         </div>
-                        <div class="ct-checbox--custom">
+                        <!--<div class="ct-checbox--custom">
                             <input id="signup" type="checkbox" name="signup" value="signup">
                             <label for="signup">I agree with <a href="#" class="ct-u-textUnderline">The terms of use</a> </label>
                         </div>-->
