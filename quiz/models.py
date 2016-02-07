@@ -100,14 +100,14 @@ class Quiz(models.Model):
         verbose_name=_("Answers at end"))
 
     exam_paper = models.BooleanField(
-        blank=False, default=False,
+        blank=True, default=True,
         help_text=_("If yes, the result of each"
                     " attempt by a user will be"
                     " stored. Necessary for marking."),
         verbose_name=_("Exam Paper"))
 
     single_attempt = models.BooleanField(
-        blank=False, default=False,
+        blank=True, default=True,
         help_text=_("If yes, only one attempt by"
                     " a user will be permitted."
                     " Non users cannot sit this exam."),

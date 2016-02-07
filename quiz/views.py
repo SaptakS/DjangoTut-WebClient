@@ -1,14 +1,18 @@
 import random
-
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView, TemplateView, FormView
 
-from .forms import QuestionForm, EssayForm
+from .forms import QuestionForm, EssayForm, CreateMCQuestionForm, CreateQuizForm
 from .models import Quiz, Category, Progress, Sitting, Question
 from essay.models import Essay_Question
+from multichoice.models import MCQuestion, Answer
 
 
 class QuizMarkerMixin(object):
@@ -377,8 +381,104 @@ def anon_session_score(session, to_add=0, possible=0):
 
     return session["session_score"], session["session_score_possible"]
 
-def create_quiz():
-    return 1
+@user_passes_test(lambda u: u.is_superuser)
+def create_quiz(request):
+    '''View function for creating a quiz '''
 
-def create_mcquestion():
-    return 1
+    if request.method == 'POST':
+        form = CreateQuizForm(request.POST)        
+
+        if form.is_valid():
+            title = request.POST.get('title', 'no title')
+            description = request.POST.get('description', 'no desc')
+            url = request.POST.get('url', 'no url')
+            category_id = int(request.POST.get('category'))
+            category = Category.objects.get(id=category_id)
+            max_questions = int(request.POST.get('max_questions', 20))
+            pass_mark = int(request.POST.get('pass_mark',40))
+            quiz_ = Quiz.objects.create(\
+                    title=title,\
+                    description=description,\
+                    url=title.replace(" ", "-"),\
+                    category=category,\
+                    max_questions=max_questions,\
+                    pass_mark = pass_mark
+                )
+            quiz_.save()
+            request.session['quiz'] = quiz_.id
+            return HttpResponseRedirect('/quiz/create_mcquestion/')
+    else:
+        form = CreateQuizForm()
+
+    variables = RequestContext(request, {
+        'form': form,
+    })
+
+    return render_to_response(
+            'create_quiz.html',
+            variables,
+    )
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def create_mcquestion(request):
+    ''' View function for creating an multiple choice question '''
+     
+    if request.method == 'POST':
+        if 'quiz' not in request.session:
+            return HttpResponseRedirect('/quiz/create_quiz/')
+        else:
+            quiz = request.session['quiz']
+        form = CreateMCQuestionForm(request.POST)
+        content = request.POST.get('content', 'Is this an empty question ?')
+        answer_order = request.POST.get('answer_order', 'random')
+        correct_ans = request.POST.get('correct_ans')
+        wrong_ans1 = request.POST.get('wrong_ans1')
+        wrong_ans2 = request.POST.get('wrong_ans2')
+        wrong_ans3 = request.POST.get('wrong_ans3')
+        if form.is_valid():
+            question = MCQuestion.objects.create(
+                    content=content,
+                    answer_order=answer_order,
+                    )
+            question.quiz.add(quiz)
+            question.save()
+            question_id = question.id
+
+            correct = Answer.objects.create(
+                     question=question,
+                     content=correct_ans,
+                     correct=True)
+            correct.save()
+
+            wrong1 = Answer.objects.create(
+                     question=question,
+                     content=wrong_ans1,
+                     correct=False)
+            wrong1.save()
+
+            wrong2 = Answer.objects.create(
+                     question=question,
+                     content=wrong_ans2,
+                     correct=False)
+            wrong2.save()
+
+            wrong3 = Answer.objects.create(
+                     question=question,
+                     content=wrong_ans3,
+                     correct=False)
+            wrong3.save()
+
+            return HttpResponseRedirect('/quiz/create_mcquestion/')
+    else:
+        form = CreateMCQuestionForm()
+
+    variables = RequestContext(request, {
+        'form': form,
+    })
+
+    return render_to_response(
+            'create_mcquestion.html',
+            variables,
+    )
+

@@ -22,14 +22,11 @@ class EssayForm(forms.Form):
 
 class CreateMCQuestionForm(ModelForm):
     class Meta:
-        model = MCQuestion
-        fields = ['figure', 'content', 'explanation', 'answer_order']
+        model = CustomMCQuestion
+        fields = ['content', 'answer_order', 'correct_ans', 'wrong_ans1', 'wrong_ans2', 'wrong_ans3']
 
 
 class CreateQuizForm(ModelForm):
     class Meta:
         model = Quiz
-        fields = ['title', 'description', 'url', 'category', 'random_order',
-                'max_questions', 'answers_at_end', 'exam_paper',
-                'single_attempt', 'pass_mark', 'success_text', 'fail_text',
-                'draft']
+        fields = ['title', 'description', 'category', 'max_questions', 'pass_mark']
