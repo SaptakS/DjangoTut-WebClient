@@ -1,4 +1,5 @@
 import random
+import string
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -388,6 +389,25 @@ def anon_session_score(session, to_add=0, possible=0):
 def create_quiz(request):
     '''View function for creating a quiz '''
 
+    def id_generator(size=15, chars=string.ascii_uppercase + string.digits):
+        """ Generates a random identifier for the given size and using the
+        specified characters.
+        If no size is specified, it uses 15 as default.
+        If no characters are specified, it uses ascii char upper case and
+        digits.
+        :arg size: the size of the identifier to return.
+        :arg chars: the list of characters that can be used in the
+            idenfitier.
+        """
+        return ''.join(random.choice(chars) for x in range(size))
+
+    def get_url(title):
+        tmp_url = title.replace(" ", "-")
+        all_quizes = Quiz.objects.all()
+        if tmp_url in [quiz.url for quiz in all_quizes]:
+            tmp_url += '--' + id_generator()
+        return tmp_url
+
     if request.method == 'POST':
         form = CreateQuizForm(request.POST)
 
@@ -398,11 +418,11 @@ def create_quiz(request):
             category_id = int(request.POST.get('category'))
             category = Category.objects.get(id=category_id)
             max_questions = int(request.POST.get('max_questions', 20))
-            pass_mark = int(request.POST.get('pass_mark',40))
+            pass_mark = int(request.POST.get('pass_mark', 0))
             quiz_ = Quiz.objects.create(\
                     title=title,\
                     description=description,\
-                    url=title.replace(" ", "-"),\
+                    url=get_url(title),\
                     category=category,\
                     max_questions=max_questions,\
                     pass_mark = pass_mark
