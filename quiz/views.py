@@ -382,11 +382,12 @@ def anon_session_score(session, to_add=0, possible=0):
     return session["session_score"], session["session_score_possible"]
 
 @user_passes_test(lambda u: u.is_superuser)
+@csrf_protect
 def create_quiz(request):
     '''View function for creating a quiz '''
 
     if request.method == 'POST':
-        form = CreateQuizForm(request.POST)        
+        form = CreateQuizForm(request.POST)
 
         if form.is_valid():
             title = request.POST.get('title', 'no title')
@@ -421,9 +422,10 @@ def create_quiz(request):
 
 
 @user_passes_test(lambda u: u.is_superuser)
+@csrf_protect
 def create_mcquestion(request):
     ''' View function for creating an multiple choice question '''
-     
+
     if request.method == 'POST':
         if 'quiz' not in request.session:
             return HttpResponseRedirect('/quiz/create_quiz/')
