@@ -60,15 +60,15 @@
             <li style="width:170px;">Welcome, {{ user.username }}</li>
             <li><a href="/logout/" >Logout<i class="fa fa-user"></i></a></li>
 
-        </ul>
-        <div class="clearfix"></div>
+</ul>
+    <div class="clearfix"></div>
     </div>
 </div>
 <nav class="navbar navbar-default yamm " data-heighttopbar="60px" data-startnavbar="0">
     <div class="container">
         <div class="ct-navbar--fluid pull-right">
             <ul class="nav navbar-nav ct-navbar--fadeInUp">
-                <li class="dropdown yamm-fw active"><a href="#">Home</a></li>  
+                <li class="dropdown yamm-fw active"><a href="#">Home</a></li>
                 <li class="dropdown yamm-fw"><a href="/mock">Mock Series</a></li>
                 <li class="dropdown yamm-fw"><a href="/gkdose">GK dose</a></li>
                 <li class="dropdown yamm-fw"><a href="/blog">Blog</a></li>
@@ -78,6 +78,17 @@
     </div>
 </nav>
 <!-- Before the quiz content -->
+{% if messages %}
+<ul class="messages">
+    {% for msg in messages %}
+    <li>
+        <div class="alert alert-{{msg.level_tag}}" role="alert">
+    {{msg.message}}
+    </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
 
 <div class="container">
 <div class="ct-modal ct-js-modal-signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -93,11 +104,11 @@
 				        <table border="0">
 				            {{ form.as_table }}
 				        </table>
-                       
+
                     </div>
                     <div class="text-center">
                         <input type="submit" class="btn btn-primary btn-lg text-uppercase" value="Submit"/>
-                         
+
                     </div>
                 </form>
             </div>

@@ -409,6 +409,9 @@ def create_quiz(request):
                 )
             quiz_.save()
             request.session['quiz'] = quiz_.id
+            messages.add_message(request, messages.SUCCESS,
+                    'Quiz created successfully! Start making questions',
+                    fail_silently=True)
             return HttpResponseRedirect('/quiz/create_mcquestion/')
     else:
         form = CreateQuizForm()
@@ -484,7 +487,9 @@ def create_mcquestion(request):
         max_questions = quiz_obj.max_questions
         num_ques_already = len(MCQuestion.objects.filter(quiz=quiz))
         if num_ques_already >= max_questions:
-            messages.add_message(request, messages.SUCCESS, 'Quiz created Successfully!')
+            messages.add_message(request, messages.SUCCESS,
+                    'Max Questions limit reached, All questions saved!',
+                    fail_silently=True)
             return HttpResponseRedirect('/quiz/create_quiz/')
 
 
