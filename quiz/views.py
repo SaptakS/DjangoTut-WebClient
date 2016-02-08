@@ -9,6 +9,7 @@ from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView, TemplateView, FormView
 from django.views.decorators.csrf import csrf_protect
+from django.contrib import messages
 
 from .forms import QuestionForm, EssayForm, CreateMCQuestionForm, CreateQuizForm
 from .models import Quiz, Category, Progress, Sitting, Question
@@ -475,6 +476,17 @@ def create_mcquestion(request):
             return HttpResponseRedirect('/quiz/create_mcquestion/')
     else:
         form = CreateMCQuestionForm()
+        if 'quiz' not in request.session:
+            return HttpResponseRedirect('/quiz/create_quiz/')
+        else:
+            quiz = request.session['quiz']
+        quiz_obj = Quiz.objects.get(id=quiz)
+        max_questions = quiz_obj.max_questions
+        num_ques_already = len(MCQuestion.objects.filter(quiz=quiz))
+        if num_ques_already >= max_questions:
+            messages.add_message(request, messages.SUCCESS, 'Quiz created Successfully!')
+            return HttpResponseRedirect('/quiz/create_quiz/')
+
 
     variables = RequestContext(request, {
         'form': form,
