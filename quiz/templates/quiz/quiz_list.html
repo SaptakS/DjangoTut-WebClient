@@ -107,8 +107,8 @@
     <div class="container">
         <div class="ct-navbar--fluid pull-right">
             <ul class="nav navbar-nav ct-navbar--fadeInUp">
-                <li class="dropdown yamm-fw"><a href="/home">Home</a></li>  
-                <li class="dropdown yamm-fw"><a href="/home#abtus">About</a></li>  
+                <li class="dropdown yamm-fw"><a href="/home">Home</a></li>
+                <li class="dropdown yamm-fw"><a href="/home#abtus">About</a></li>
                 <li class="dropdown yamm-fw"><a href="/home#why">Why join?</a></li>
                 <li class="dropdown yamm-fw"><a href="/courses-listing">Courses</a>
                     <ul class="dropdown-menu">
@@ -124,7 +124,7 @@
                                     <div class="col-sm-3">
                                         <a href="/course-single">Law</a>
                                     </div>
-                                    <div class="col-sm-3">    
+                                    <div class="col-sm-3">
                                         <a href="/course-single">BBA</a>
                                     </div>
                                 </div>
@@ -137,6 +137,9 @@
                 <li class="dropdown yamm-fw"><a href="/blog">Blog</a></li>
                 <li class="dropdown yamm-fw"><a href="/contact">Contact</a></li>
                 <li class="dropdown yamm-fw"><a href="/news">News</a></li>
+                {% if request.user.is_superuser %}
+                  <li class="dropdown yamm-fw"><a href="/quiz/create_quiz">Create Quiz</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>
