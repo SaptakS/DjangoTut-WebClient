@@ -8,6 +8,7 @@ from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView, TemplateView, FormView
+from django.views.decorators.csrf import csrf_protect
 
 from .forms import QuestionForm, EssayForm, CreateMCQuestionForm, CreateQuizForm
 from .models import Quiz, Category, Progress, Sitting, Question
