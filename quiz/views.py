@@ -398,7 +398,7 @@ def create_quiz(request):
             category_id = int(request.POST.get('category'))
             category = Category.objects.get(id=category_id)
             max_questions = int(request.POST.get('max_questions', 20))
-            pass_mark = int(request.POST.get('pass_mark',40))
+            pass_mark = int(request.POST.get('pass_mark', 0))
             quiz_ = Quiz.objects.create(\
                     title=title,\
                     description=description,\
