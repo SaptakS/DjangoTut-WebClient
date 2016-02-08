@@ -1,4 +1,5 @@
 Django==1.8
+django-email-as-username==1.6.7
 django-model-utils==2.0.3
 django-widget-tweaks==1.4.1
 Pillow==2.5.0
