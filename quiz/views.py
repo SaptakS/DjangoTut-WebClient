@@ -468,6 +468,7 @@ def create_mcquestion(request):
             question = MCQuestion.objects.create(
                     content=content,
                     answer_order=answer_order,
+                    explanation=explanation
                     )
             question.quiz.add(quiz)
             question.save()
