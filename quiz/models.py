@@ -90,7 +90,7 @@ class Quiz(models.Model):
                     "are set?"))
 
     max_questions = models.PositiveIntegerField(
-        blank=True, null=True, verbose_name=_("Max Questions"),
+        blank=True, null=True, verbose_name=_("Total Questions"),
         help_text=_("Number of questions to be answered on each attempt."))
 
     answers_at_end = models.BooleanField(

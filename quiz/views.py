@@ -458,6 +458,7 @@ def create_mcquestion(request):
             quiz = request.session['quiz']
         form = CreateMCQuestionForm(request.POST)
         content = request.POST.get('content', 'Is this an empty question ?')
+        explanation = request.POST.get('explanation')
         answer_order = request.POST.get('answer_order', 'random')
         correct_ans = request.POST.get('correct_ans')
         wrong_ans1 = request.POST.get('wrong_ans1')
