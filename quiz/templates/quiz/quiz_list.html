@@ -74,6 +74,9 @@
         {% if user.username %}
         <ul class="ct-panel--user list-inline text-uppercase pull-right">
             <li style="width:170px;">Welcome, {{ user.username }}</li>
+            {% if request.user.is_superuser %}
+              <li class="dropdown yamm-fw"><a href="/quiz/create_quiz">Create Quiz</a></li>
+            {% endif %}
             <li><a href="/logout/" >Logout<i class="fa fa-user"></i></a></li>
         </ul>
         {% else %}
@@ -138,9 +141,7 @@
                 <li class="dropdown yamm-fw"><a href="/blog">Blog</a></li>
                 <li class="dropdown yamm-fw"><a href="/contact">Contact</a></li>
                 <li class="dropdown yamm-fw"><a href="/news">News</a></li>
-                {% if request.user.is_superuser %}
-                  <li class="dropdown yamm-fw"><a href="/quiz/create_quiz">Create Quiz</a></li>
-                {% endif %}
+                
             </ul>
         </div>
     </div>
@@ -253,7 +254,7 @@
                 <div class="col-md-6">
                     <ul class="list-unstyled list-inline ct-copyright">
                         <li>Copyright 2015</li>
-                        <li>Created by </li>
+                        <li>Studybasin </li>
                     </ul>
                 </div>
                 <div class="col-md-6">
