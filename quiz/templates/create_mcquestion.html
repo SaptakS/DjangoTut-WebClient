@@ -95,6 +95,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
+                {% if question_number %}
+                  <p> {{ question_number }} </p>
+                {% endif %}
                 <h3 class="modal-title text-uppercase">Create Question</h3>
             </div>
             <div class="modal-body">

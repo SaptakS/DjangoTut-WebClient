@@ -506,6 +506,7 @@ def create_mcquestion(request):
         quiz_obj = Quiz.objects.get(id=quiz)
         max_questions = quiz_obj.max_questions
         num_ques_already = len(MCQuestion.objects.filter(quiz=quiz))
+        next_question_number = num_ques_already + 1
         if num_ques_already >= max_questions:
             messages.add_message(request, messages.SUCCESS,
                     'Max Questions limit reached, All questions saved!',
@@ -515,6 +516,7 @@ def create_mcquestion(request):
 
     variables = RequestContext(request, {
         'form': form,
+        'question_number': next_question_number,
     })
 
     return render_to_response(
