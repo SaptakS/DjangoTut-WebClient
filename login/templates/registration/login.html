@@ -144,8 +144,12 @@
                         </div>-->
                     </div>
                     <div class="text-center">
-                        <input type="submit" class="btn btn-primary btn-lg text-uppercase" value="Sign In"/>                        
+                        <input type="submit" class="btn btn-primary btn-lg text-uppercase" value="Sign In"/> 
+                        {% if next %}                       
                         <input type="hidden" name="next" value="{{ next }}" />
+                        {% else %}
+                        <input type="hidden" name="next" value="{{ next }}" />
+                        {% endif %}                        
                         <div class="ct-u-marginTop50">
                             <!--<a href="#"><i class="fa fa-info-circle"></i> Forgot Password ?</a>-->
                             <a href="/register"><i class="fa fa-long-arrow-right"></i> Register Now ?</a>
