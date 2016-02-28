@@ -1,6 +1,6 @@
 # DjangoTUt-WebClient
 
-This repository consists a tutorial web client made in Django. The web client has a support for conducting Mock Series and a complete backend support for the same.
+This repository consists a tutorial web client made in Django. The web client has a support for conducting Mock Series and a complete backend support for the same. You can check the demo here: [http://python-studybasin.rhcloud.com/](http://python-studybasin.rhcloud.com/)
 
 # Technologies Used
 
